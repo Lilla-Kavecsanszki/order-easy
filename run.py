@@ -32,6 +32,22 @@ def get_current_stocks_data():
     print("Examlpe: 12,23,34,36,46,37,49\n")
 
     data_str = input("Enter your numbers here: ")
-    print(f"The current stocks holding is {data_str}")
+
+    current_stock = data_str.split(",")
+    validate_data(current_stock)
+
+def validate_data(values):
+    """
+    Inside the try, make sure all the string values are numbers, 
+    raises ValueError, if strings are not numbers, 
+    or if there are not exactly 7 values
+    """
+    try:
+        if len(values) != 7:
+            raise ValueError(
+                f"Exactly 7 values required, you provided {len(values)}. If an item has run out completely, put 0")
+    except ValueError as e:
+        print(f"Invalid data: {e}, please try again.\n")
+
 
 get_current_stocks_data()
