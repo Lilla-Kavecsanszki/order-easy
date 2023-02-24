@@ -42,10 +42,13 @@ def validate_data(values):
     raises ValueError, if strings are not numbers, 
     or if there are not exactly 7 values
     """
+
+    #https://stackoverflow.com/questions/74665788/how-to-convert-string-to-number-in-python
     try:
+        [int(value) if value.isdigit() else float(value) for value in values]
         if len(values) != 7:
             raise ValueError(
-                f"Exactly 7 values required, you provided {len(values)}. If an item has run out completely, put 0")
+                f"Exactly 7 numbers required, you provided {len(values)}. If an item has run out completely, put 0")
     except ValueError as e:
         print(f"Invalid data: {e}, please try again.\n")
 
