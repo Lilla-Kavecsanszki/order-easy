@@ -27,15 +27,22 @@ def get_current_stocks_data():
     """
     Get current stock holoding figures input from the user
     """
-    print("Please enter current stock data.") 
-    print("Data should be 7 numbers, separated by commas.")
-    print("Examlpe: 12,23,34,36,46,37,49\n")
+    while True:
 
-    data_str = input("Enter your numbers here: ")
+        print("Please enter current stock data.") 
+        print("Data should be 7 numbers, separated by commas.")
+        print("Examlpe: 12,23,34,36,46,37,49\n")
 
-    current_stock = data_str.split(",")
-    validate_data(current_stock)
+        data_str = input("Enter your numbers here: ")
 
+        current_stock = data_str.split(",")
+        
+        if validate_data(current_stock):
+            print("Data is valid")
+            break
+
+    return current_stock
+        
 def validate_data(values):
     """
     Inside the try, make sure all the string values are numbers, 
@@ -51,6 +58,9 @@ def validate_data(values):
                 f"Exactly 7 numbers required, you provided {len(values)}. If an item has run out completely, put 0")
     except ValueError as e:
         print(f"Invalid data: {e}, please try again.\n")
+        return False
+
+    return True
 
 
-get_current_stocks_data()
+data = get_current_stocks_data()
