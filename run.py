@@ -107,10 +107,16 @@ def howmuch_to_order(current_stocks_data_column):
     much of the certain product we should have. We need to order the difference. If we got a minus number as our result, that means
     we have too many of the noted product on stock and no need to order.
     """
-    print("Summarizing order list...\n")
+    print("Collecting order list...\n")
 
     par_level = wines.col_values(4)
-    print(par_level)
+    par_level.pop(0)
+    
+    order_amount_counts = []
+    for par, stock in zip(par_level, current_stocks_data_column):
+        order_amount = int(par) - stock
+        order_amount_counts.append(order_amount)
+    return order_amount_counts
 
 def main():
     """
@@ -122,6 +128,7 @@ current_stocks_data = [int(num) if num.isdigit() else float(num)for num in data]
 update_stocks_countsheet(current_stocks_data)
 get_wine_product_list()
 show_date() #show only when update the stock levels
-howmuch_to_order(current_stocks_data)
+new_order_amount_counts = howmuch_to_order(current_stocks_data)
+print(new_order_amount_counts)
 
 main()
