@@ -23,8 +23,10 @@ wine_stock = wines.get_all_values()
 beer_stock = beers.get_all_values()
 soft_drink_stock= soft_drinks.get_all_values()
 
-#to get all the products printed (wines)
 def get_wine_product_list():
+    """
+    Get the product list printed (wines)
+    """
     wine_list = wines.col_values(1)
     for item in range(len(wine_list)):
         print(wine_list[item])
@@ -84,9 +86,6 @@ def show_date():
     wines_countsheet.update_cell(1, 5, x)
     print(x)
 
-
-
-
 def update_stocks_countsheet(data):
     """
     Update stocks worksheet, add new column with the list of data provided
@@ -102,6 +101,17 @@ def update_stocks_countsheet(data):
     wines_countsheet.update_cell(2, 5, x)
     print("Wine stocks countsheet updated successfully.\n")   
 
+def howmuch_to_order(current_stocks_data_column):
+    """
+    Calculate the order list by minusing the current stock holding number from the par level number. The par level indicates how 
+    much of the certain product we should have. We need to order the difference. If we got a minus number as our result, that means
+    we have too many of the noted product on stock and no need to order.
+    """
+    print("Summarizing order list...\n")
+
+    par_level = wines.col_values(4)
+    print(par_level)
+
 def main():
     """
     Run all program functions
@@ -112,5 +122,6 @@ current_stocks_data = [int(num) if num.isdigit() else float(num)for num in data]
 update_stocks_countsheet(current_stocks_data)
 get_wine_product_list()
 show_date() #show only when update the stock levels
+howmuch_to_order(current_stocks_data)
 
 main()
