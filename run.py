@@ -70,13 +70,16 @@ def update_stocks_countsheet(data):
     """
     print("Updating stocks countsheet...\n")
     wines_countsheet = SHEET.worksheet('wines')
+    
+    for count in range(len(current_stocks_data)):
+        print(current_stocks_data[count])
 
-    for x in range(2, 9):
-    wines_countsheet.update('E2:E8', current_stocks_data)
+    x = current_stocks_data[count]
+
+
+    wines_countsheet.update_cell(2, 5, x)
     print("Wine stocks countsheet updated successfully.\n")
-    print(wines_countsheet)
-
-    for x in range(2, 9):
+   
 
 data = get_current_stocks_data()
 current_stocks_data = [int(num) if num.isdigit() else float(num)for num in data]

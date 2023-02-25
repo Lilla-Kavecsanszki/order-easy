@@ -1,6 +1,9 @@
  #https://stackoverflow.com/questions/74665788/how-to-convert-string-to-number-in-python
  how to convert data into integers and floats 
 
+ https://docs.gspread.org/en/latest/user-guide.html#updating-cells
+ How to update cells and work the spreadsheet
+
 ## Reminders
 
 * Your code must be placed in the `run.py` file
