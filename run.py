@@ -1,5 +1,6 @@
 import gspread
 from google.oauth2.service_account import Credentials
+from datetime import datetime
 
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
@@ -71,6 +72,17 @@ def validate_data(values):
 
     return True
 
+def show_date():
+    wines_countsheet = SHEET.worksheet('wines')
+    the_date = datetime.now().date()
+    
+    x = f'Current Stock Holding {the_date}'
+    wines_countsheet.update_cell(1, 5, x)
+    print(x)
+
+show_date() #show only when update the stock levels
+
+
 def update_stocks_countsheet(data):
     """
     Update stocks worksheet, add new column with the list of data provided
@@ -84,9 +96,11 @@ def update_stocks_countsheet(data):
     x = current_stocks_data[count]
 
     wines_countsheet.update_cell(2, 5, x)
-    print("Wine stocks countsheet updated successfully.\n")
-   
+    print("Wine stocks countsheet updated successfully.\n")   
 
 data = get_current_stocks_data()
 current_stocks_data = [int(num) if num.isdigit() else float(num)for num in data]
 update_stocks_countsheet(current_stocks_data)
+
+
+
