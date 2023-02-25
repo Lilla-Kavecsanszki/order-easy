@@ -101,6 +101,21 @@ def update_stocks_countsheet(data):
     wines_countsheet.update_cell(2, 5, x)
     print("Wine stocks countsheet updated successfully.\n")   
 
+def update_order_list_sheet(data):
+    """
+    Update order amounts on the worksheet, add new column with the list of data calculated
+    """
+    print("Updating order list...\n")
+    wines_order = SHEET.worksheet('wines')
+    
+    for amount in range(len(new_order_amount_counts)):
+        print(new_order_amount_counts[amount])
+
+    x = new_order_amount_counts[amount]
+
+    wines_order.update_cell(2, 6, x)
+    print("Order list updated successfully.\n")   
+
 def howmuch_to_order(current_stocks_data_column):
     """
     Calculate the order list by minusing the current stock holding number from the par level number. The par level indicates how 
@@ -129,6 +144,5 @@ update_stocks_countsheet(current_stocks_data)
 get_wine_product_list()
 show_date() #show only when update the stock levels
 new_order_amount_counts = howmuch_to_order(current_stocks_data)
-print(new_order_amount_counts)
-
+update_order_list_sheet(new_order_amount_counts)
 main()
