@@ -26,9 +26,13 @@ soft_drink_stock= soft_drinks.get_all_values()
 #to get all the products printed (wines)
 def get_wine_product_list():
     wine_list = wines.col_values(1)
-    print(wine_list)
+    for item in range(len(wine_list)):
+        print(wine_list[item])
 
-get_wine_product_list()
+    x = wine_list[item]
+
+
+
 
 #wines
 def get_current_stocks_data():
@@ -80,7 +84,7 @@ def show_date():
     wines_countsheet.update_cell(1, 5, x)
     print(x)
 
-show_date() #show only when update the stock levels
+
 
 
 def update_stocks_countsheet(data):
@@ -98,9 +102,15 @@ def update_stocks_countsheet(data):
     wines_countsheet.update_cell(2, 5, x)
     print("Wine stocks countsheet updated successfully.\n")   
 
+def main():
+    """
+    Run all program functions
+    """
+
 data = get_current_stocks_data()
 current_stocks_data = [int(num) if num.isdigit() else float(num)for num in data]
 update_stocks_countsheet(current_stocks_data)
+get_wine_product_list()
+show_date() #show only when update the stock levels
 
-
-
+main()
