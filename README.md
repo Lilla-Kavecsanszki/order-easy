@@ -3,6 +3,7 @@
 
  https://docs.gspread.org/en/latest/user-guide.html#updating-cells
  How to update cells and work the spreadsheet
+ https://docs.gspread.org/en/latest/user-guide.html#getting-all-values-from-a-row-or-a-column
 
 ## Reminders
 

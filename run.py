@@ -22,6 +22,13 @@ wine_stock = wines.get_all_values()
 beer_stock = beers.get_all_values()
 soft_drink_stock= soft_drinks.get_all_values()
 
+#to get all the products printed (wines)
+def get_wine_product_list():
+    wine_list = wines.col_values(1)
+    print(wine_list)
+
+get_wine_product_list()
+
 #wines
 def get_current_stocks_data():
     """
@@ -75,7 +82,6 @@ def update_stocks_countsheet(data):
         print(current_stocks_data[count])
 
     x = current_stocks_data[count]
-
 
     wines_countsheet.update_cell(2, 5, x)
     print("Wine stocks countsheet updated successfully.\n")
