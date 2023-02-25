@@ -34,8 +34,6 @@ def get_wine_product_list():
     x = wine_list[item]
 
 
-
-
 #wines
 def get_current_stocks_data():
     """
@@ -98,6 +96,16 @@ def update_stocks_countsheet(data):
 
     x = current_stocks_data[count]
 
+    stock_column = wines_countsheet.col_values(5)
+    stock_column.pop(0)
+
+    for ind in range(len(stock_column)):
+	# only the index is iterated over not the value
+        print(ind, stock_column[ind])
+
+    y = (ind, stock_column[ind])
+    
+
     wines_countsheet.update_cell(2, 5, x)
     print("Wine stocks countsheet updated successfully.\n")   
 
@@ -109,9 +117,8 @@ def update_order_list_sheet(data):
     wines_order = SHEET.worksheet('wines')
     
     for amount in range(len(new_order_amount_counts)):
-        print(new_order_amount_counts[amount])
-
-    x = new_order_amount_counts[amount]
+        
+        x = new_order_amount_counts[amount]
 
     wines_order.update_cell(2, 6, x)
     print("Order list updated successfully.\n")   
