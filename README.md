@@ -1,8 +1,5 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
-
-Welcome Lilla Kavecsanszki,
-
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
+ #https://stackoverflow.com/questions/74665788/how-to-convert-string-to-number-in-python
+ how to convert data into integers and floats 
 
 ## Reminders
 

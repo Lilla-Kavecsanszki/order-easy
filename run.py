@@ -25,7 +25,9 @@ soft_drink_stock= soft_drinks.get_all_values()
 #wines
 def get_current_stocks_data():
     """
-    Get current stock holoding figures input from the user
+    Get current stock holoding figures input from the user,
+    running a while loop, to get a valid string of data, which must be a string of 6 whole or float numbers separeted by 
+    commas. The loop will keep repeating the request until gets the valid data
     """
     while True:
 
@@ -62,5 +64,20 @@ def validate_data(values):
 
     return True
 
+def update_stocks_countsheet(data):
+    """
+    Update stocks worksheet, add new column with the list of data provided
+    """
+    print("Updating stocks countsheet...\n")
+    wines_countsheet = SHEET.worksheet('wines')
+
+    for x in range(2, 9):
+    wines_countsheet.update('E2:E8', current_stocks_data)
+    print("Wine stocks countsheet updated successfully.\n")
+    print(wines_countsheet)
+
+    for x in range(2, 9):
 
 data = get_current_stocks_data()
+current_stocks_data = [int(num) if num.isdigit() else float(num)for num in data]
+update_stocks_countsheet(current_stocks_data)
