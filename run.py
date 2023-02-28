@@ -33,6 +33,14 @@ def get_wine_product_list():
 
     x = wine_list[item]
 
+get_wine_product_list()
+
+def add_new_product():
+
+
+
+
+def delete_product():
 
 #wines
 def get_current_stocks_data():
@@ -129,7 +137,7 @@ def howmuch_to_order(current_stocks_data_column):
         order_amount_counts.append(order_amount)
     return order_amount_counts
 
-def main():
+def get_the_order_list_wines():
     """
     Run all program functions
     """
@@ -137,8 +145,48 @@ def main():
 data = get_current_stocks_data()
 current_stocks_data = [int(num) if num.isdigit() else float(num)for num in data]
 update_stocks_countsheet(current_stocks_data)
-get_wine_product_list()
-show_date() #show only when update the stock levels
+show_date()  #show only when update the stock levels
 new_order_amount_counts = howmuch_to_order(current_stocks_data)
 update_order_list_sheet(new_order_amount_counts)
-main()
+
+
+get_the_order_list_wines()
+
+
+def submenu():
+    """
+    Asks the user to select what they would like to do. Keep repeating until the user decides to go back to the main menu.
+    """
+    while True:
+    
+        print(‘xy Menu - OrderEasy Application:\n')
+        print('1. Print Product List')
+        print('2. Add New Product')
+        print(‘3. Delete Product')
+        print(‘4. Get the Order List')
+        print(‘5. Back to the Categories’)
+        print('\nPlease select what you would like to do  by entering a number between 1 and 4')
+
+        option = input('Enter your number here:\n')
+
+
+    submenu()
+
+def menu():
+    """
+    First contact with the user, asks the user to select what they would like to do. Keep repeating until the 
+    user decides to exit.
+    """
+    while True:
+    
+        print(‘xy Menu - OrderEasy Application:\n')
+        print('1. Spirits')
+        print('2. Wines')
+        print(‘3. Beers')
+        print(‘4. Soft Drinks')
+        print(‘5. Exit’)
+        print('\nPlease select what you would like to do  by entering a number between 1 and 4')
+
+        option = input('Enter your number here:\n')
+
+menu()
