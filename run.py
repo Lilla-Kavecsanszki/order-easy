@@ -100,18 +100,16 @@ def update_stocks_countsheet(data):
     print("Wine stocks countsheet updated successfully.\n")
     
 
-def update_order_list_sheet(data):
+def update_order_list_sheet(new_order_amount_counts):
     """
-    Update order amounts on the worksheet, add new column with the list of data calculated
+    Update order amounts on the worksheet, add new column with the list of new order amount counts calculated
     """
     print("Updating order list...\n")
     wines_order = SHEET.worksheet('wines')
     
     for amount in range(len(new_order_amount_counts)):
-        
-        x = new_order_amount_counts[amount]
+        wines_order.update_cell(amount+2, 6, new_order_amount_counts[amount])
 
-    wines_order.update_cell(2, 6, x)
     print("Order list updated successfully.\n")   
 
 def howmuch_to_order(current_stocks_data_column):
