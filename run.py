@@ -47,7 +47,7 @@ def get_current_stocks_data():
         print("Data should be 7 numbers, separated by commas.")
         print("Examlpe: 12,23,34,36,46,37,49\n")
 
-        data_str = input("Enter your numbers here: ")
+        data_str = input("Enter your numbers here:\n")
 
         current_stock = data_str.split(",")
         
