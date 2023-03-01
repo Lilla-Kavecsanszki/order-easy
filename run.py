@@ -139,32 +139,33 @@ def howmuch_to_order(current_stocks_data_column):
         order_amount_counts.append(order_amount)
     return order_amount_counts
 
-def print_order_list():
+def print_order_list_wines():
     """
-    Get the list of products and relevantly their number that indicates how much the user needs to order, printed (wines)
+    Printing out the list of products and relevantly their information that indicates how much the user needs to order 
+    (wines)
     """
-    wine_order_list = wines.col_values(6)
-    for amount in range(len(wine_order_list)):
-        print(wine_order_list[amount])
+    print("Collecting order list and details...\n")
 
-    x = wine_order_list[amount]
+    wine_order = wines.get_all_values()
+    print(wine_order)
 
-print_order_list()
 
 def get_the_order_list_wines():
     """
-    Run all program functions
+    Run all program functions for the ordering information
     """
 
 data = get_current_stocks_data()
 current_stocks_data = [int(num) if num.isdigit() else float(num)for num in data]
 update_stocks_countsheet(current_stocks_data)
-show_date()  #show only when update the stock levels
+show_date()  #show current date when update the stock levels
 new_order_amount_counts = howmuch_to_order(current_stocks_data)
 update_order_list_sheet(new_order_amount_counts)
-
+print_order_list_wines()
 
 get_the_order_list_wines()
+
+
 
 '''
 # def submenu():
