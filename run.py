@@ -147,8 +147,11 @@ def print_order_list_wines():
     print("Collecting order list and details...\n")
 
     wine_order = wines.get_all_values()
-    print(wine_order)
 
+    for item in range(len(wine_order)):
+        print(wine_order[item])
+
+    x = wine_order[item]
 
 def get_the_order_list_wines():
     """
