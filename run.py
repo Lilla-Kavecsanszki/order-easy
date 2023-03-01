@@ -93,10 +93,64 @@ def add_new_product(new_product_data):
 
 add_new_product(new_product_data)
 
+
+
+#Delete a product
+def get_deleted_product():
+    """
+    Get deleted product details input from the user,
+    running a while loop, to get a valid string of data, which must be a string of 1 value. The loop will keep repeating 
+    the request until gets the valid data
+    """
+    while True:
+
+        print("Please enter the name of the product, that you wish to delete.") 
+        print("Data should contain 1 value, the name.")
+        print("Examlpe: Campari\n")
+
+        deleting_product = input("Enter the name of the product here:\n")
+
+        print(deleting_product)
+        
+        if validate_data_add_product(new_product):
+            print("Data for d product is valid")
+            break
+
+    return new_product
+
+
+def validate_data_add_product(values):
+    '''
+    Validates the list of user input for the new product
+    '''
+    print('Validating input details...\n')
+       
+    try: 
+        if len(values) != 4:  #check the number of details matches the number required
+            raise ValueError(f"Exactly 4 details required, you provided {len(values)}.")
+    
+        if not isinstance(int(values[3]), int):    #validate the par level (integer)
+            raise ValueError("Par level must be an integer")
+    
+    except ValueError as e:
+        print(f"Invalid data: {e}, please try again.\n")
+        return False
+
+    return True
+
+new_product_data = get_new_product()
+
 '''
 def delete_product():
 
-worksheet.delete_row(42)
+    wine_list = wines.col_values(1)
+    for product in range(len(wine_list)):
+        print(wine_list[product])
+
+    x = wine_list[product]
+
+    if cancelled_product = x:
+    worksheet.delete_row(x)
 '''
 
 #wines
