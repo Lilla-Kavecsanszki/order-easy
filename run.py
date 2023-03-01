@@ -80,15 +80,20 @@ def validate_data_add_product(values):
 
 new_product_data = get_new_product()
 
-'''
-def add_new_product():
 
+def add_new_product(new_product_data):
+    '''
+    Updates the worksheet with the details of the new product
+    '''
+    print("Updating wines stocksheet...\n")
     wines = SHEET.worksheet('wines')
+    wines.append_row(new_product_data)
+    
+    print("Wines stocksheet updated successfully.\n")
 
-    new_product = []
-    wines.insert_row(new_product)
+add_new_product(new_product_data)
 
-
+'''
 def delete_product():
 
 worksheet.delete_row(42)
