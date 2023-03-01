@@ -28,19 +28,21 @@ def get_wine_product_list():
     Get the product list printed (wines)
     """
     wine_list = wines.col_values(1)
-    for item in range(len(wine_list)):
-        print(wine_list[item])
+    for product in range(len(wine_list)):
+        print(wine_list[product])
 
-    x = wine_list[item]
+    x = wine_list[product]
 
 get_wine_product_list()
 
-def add_new_product():
+# def add_new_product():
 
 
 
 
-def delete_product():
+# def delete_product():
+
+
 
 #wines
 def get_current_stocks_data():
@@ -137,6 +139,18 @@ def howmuch_to_order(current_stocks_data_column):
         order_amount_counts.append(order_amount)
     return order_amount_counts
 
+def print_order_list():
+    """
+    Get the list of products and relevantly their number that indicates how much the user needs to order, printed (wines)
+    """
+    wine_order_list = wines.col_values(6)
+    for amount in range(len(wine_order_list)):
+        print(wine_order_list[amount])
+
+    x = wine_order_list[amount]
+
+print_order_list()
+
 def get_the_order_list_wines():
     """
     Run all program functions
@@ -152,41 +166,42 @@ update_order_list_sheet(new_order_amount_counts)
 
 get_the_order_list_wines()
 
-
-def submenu():
+'''
+# def submenu():
     """
     Asks the user to select what they would like to do. Keep repeating until the user decides to go back to the main menu.
     """
     while True:
     
-        print(‘xy Menu - OrderEasy Application:\n')
+        print('xy Menu - OrderEasy Application:\n')
         print('1. Print Product List')
         print('2. Add New Product')
-        print(‘3. Delete Product')
-        print(‘4. Get the Order List')
-        print(‘5. Back to the Categories’)
+        print('3. Delete Product')
+        print('4. Get the Order List')
+        print('5. Back to the Categories')
         print('\nPlease select what you would like to do  by entering a number between 1 and 4')
 
         option = input('Enter your number here:\n')
 
 
-    submenu()
+# submenu()
 
-def menu():
+# def menu():
     """
     First contact with the user, asks the user to select what they would like to do. Keep repeating until the 
     user decides to exit.
     """
     while True:
     
-        print(‘xy Menu - OrderEasy Application:\n')
+        print('xy Menu - OrderEasy Application:\n')
         print('1. Spirits')
         print('2. Wines')
-        print(‘3. Beers')
-        print(‘4. Soft Drinks')
-        print(‘5. Exit’)
+        print('3. Beers')
+        print('4. Soft Drinks')
+        print('5. Exit')
         print('\nPlease select what you would like to do  by entering a number between 1 and 4')
 
         option = input('Enter your number here:\n')
 
-menu()
+# menu()
+'''
