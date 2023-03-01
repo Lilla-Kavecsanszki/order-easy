@@ -52,7 +52,7 @@ def get_new_product():
         new_product = data_str.split(",")
         print(new_product)
         
-        if validate_data_add_product(new_productclear):
+        if validate_data_add_product(new_product):
             print("Data for new product is valid")
             break
 
@@ -65,19 +65,10 @@ def validate_data_add_product(values):
     '''
     print('Validating input details...\n')
        
-    if len(values) != 4:  #check the number of details matches the number required
-        raise ValueError(f"Exactly 4 details required, you provided {len(values)}.")
+    try: 
+        if len(values) != 4:  #check the number of details matches the number required
+            raise ValueError(f"Exactly 4 details required, you provided {len(values)}.")
     
-    try:
-        if not isinstance(values[0], str):   #validate the name (string)
-            raise ValueError("Product name must be a string")
-
-        if not isinstance(values[1], str):   #validate the unit (string)    
-            raise ValueError("unit type must be a string")
-
-        if not isinstance(values[2], str):   #validate the price (string)
-            raise ValueError("Price must be a string")
-
         if not isinstance(int(values[3]), int):    #validate the par level (integer)
             raise ValueError("Par level must be an integer")
     
@@ -87,7 +78,7 @@ def validate_data_add_product(values):
 
     return True
 
-get_new_product()
+new_product_data = get_new_product()
 
 '''
 def add_new_product():

@@ -8,6 +8,9 @@
 
  https://stackoverflow.com/questions/30989213/can-i-control-the-output-of-insert-row-in-gspread
 
+checking data types
+ https://stackoverflow.com/questions/1549801/what-are-the-differences-between-type-and-isinstance
+
 ## Reminders
 
 * Your code must be placed in the `run.py` file
