@@ -4,6 +4,9 @@
  https://docs.gspread.org/en/latest/user-guide.html#updating-cells
  How to update cells and work the spreadsheet
  https://docs.gspread.org/en/latest/user-guide.html#getting-all-values-from-a-row-or-a-column
+ https://stackoverflow.com/questions/14625617/how-to-delete-remove-row-from-the-google-spreadsheet-using-gspread-lib-in-pytho
+
+ https://stackoverflow.com/questions/30989213/can-i-control-the-output-of-insert-row-in-gspread
 
 ## Reminders
 

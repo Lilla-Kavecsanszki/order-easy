@@ -35,14 +35,73 @@ def get_wine_product_list():
 
 get_wine_product_list()
 
-# def add_new_product():
+def get_new_product():
+    """
+    Get new product details input from the user,
+    running a while loop, to get a valid string of data, which must be a string of 4 details separeted by 
+    commas. The loop will keep repeating the request until gets the valid data
+    """
+    while True:
+
+        print("Please enter the details of the new product.") 
+        print("Data should contain 4 details, separated by commas: Name,Unit,Price,Par level")
+        print("Examlpe: Campari,Bottle,£14.26,18\n")
+
+        data_str = input("Enter the new product details here:\n")
+
+        new_product = data_str.split(",")
+        print(new_product)
+        
+        if validate_data_add_product(new_productclear):
+            print("Data for new product is valid")
+            break
+
+    return new_product
 
 
+def validate_data_add_product(values):
+    '''
+    Validates the list of user input for the new product
+    '''
+    print('Validating input details...\n')
+       
+    if len(values) != 4:  #check the number of details matches the number required
+        raise ValueError(f"Exactly 4 details required, you provided {len(values)}.")
+    
+    try:
+        if not isinstance(values[0], str):   #validate the name (string)
+            raise ValueError("Product name must be a string")
+
+        if not isinstance(values[1], str):   #validate the unit (string)    
+            raise ValueError("unit type must be a string")
+
+        if not isinstance(values[2], str):   #validate the price (string)
+            raise ValueError("Price must be a string")
+
+        if not isinstance(int(values[3]), int):    #validate the par level (integer)
+            raise ValueError("Par level must be an integer")
+    
+    except ValueError as e:
+        print(f"Invalid data: {e}, please try again.\n")
+        return False
+
+    return True
+
+get_new_product()
+
+'''
+def add_new_product():
+
+    wines = SHEET.worksheet('wines')
+
+    new_product = []
+    wines.insert_row(new_product)
 
 
-# def delete_product():
+def delete_product():
 
-
+worksheet.delete_row(42)
+'''
 
 #wines
 def get_current_stocks_data():
