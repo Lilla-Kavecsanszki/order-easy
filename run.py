@@ -278,27 +278,62 @@ print_order_list_wines()
 get_the_order_list_wines()
 
 
+#https://computinglearner.com/how-to-create-a-menu-for-a-python-console-application/?utm_content=cmp-true
+ 
+menu_options = {
+    1: '1. Print Product List',
+    2: '2. Add New Product',
+    3: '3. Delete Product',
+    4: '4. Get the Order List',
+    5: '5. Back to the Categories'
+}
 
-'''
-# def submenu():
+def print_menu():
     """
     Asks the user to select what they would like to do. Keep repeating until the user decides to go back to the main menu.
     """
-    while True:
-    
-        print('xy Menu - OrderEasy Application:\n')
-        print('1. Print Product List')
-        print('2. Add New Product')
-        print('3. Delete Product')
-        print('4. Get the Order List')
-        print('5. Back to the Categories')
-        print('\nPlease select what you would like to do  by entering a number between 1 and 4')
+    for key in menu_options.keys():
+        print (key, '--', menu_options[key] )
 
-        option = input('Enter your number here:\n')
+def option1():
+     print('Handle option \'Option 1\'')
 
+def option2():
+     print('Handle option \'Option 2\'')
 
-# submenu()
+def option3():
+     print('Handle option \'Option 3\'')
 
+def option4():
+     print('Handle option \'Option 4\'')
+
+print('Sub-Menu - OrderEasy Application:\n')
+print('\nPlease select what you would like to do by entering a number between 1 and 5')
+
+if __name__=='__main__':
+    while(True):
+        print_menu()
+        option = ''
+        try:
+            option = int(input('Enter your number here:\n'))
+        except:
+            print('Wrong input. Please enter a number ...')
+        #Check what choice was entered and act accordingly
+        if option == 1:
+           option1()
+        elif option == 2:
+            option2()
+        elif option == 3:
+            option3()
+        elif option == 4:
+            option4()
+        elif option == 5:
+            print('Thank You, Goodbye!')
+            exit()
+        else:
+            print('Invalid option. Please enter a number between 1 and 5.')
+
+'''
 # def menu():
     """
     First contact with the user, asks the user to select what they would like to do. Keep repeating until the 
