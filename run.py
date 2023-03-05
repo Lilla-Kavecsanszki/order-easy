@@ -33,8 +33,6 @@ def get_wine_product_list():
 
     x = wine_list[product]
 
-get_wine_product_list()
-
 def get_new_product():
     """
     Get new product details input from the user,
@@ -93,8 +91,6 @@ def add_new_product(new_product_data):
 
 add_new_product(new_product_data)
 
-
-
 #Delete a product
 def get_deleted_product():
     """
@@ -110,27 +106,24 @@ def get_deleted_product():
 
         deleting_product = input("Enter the name of the product here:\n")
 
-        print(deleting_product)
-        
-        if validate_data_add_product(new_product):
-            print("Data for d product is valid")
+        print('Deleting product...')
+
+        if validate_data_delete_product(deleting_product):
+            print("Data for deleted product is valid")
             break
 
-    return new_product
+    return deleting_product
 
 
-def validate_data_add_product(values):
+def validate_data_delete_product(values):
     '''
-    Validates the list of user input for the new product
+    Validates the list of user input for the deleted product
     '''
     print('Validating input details...\n')
        
     try: 
-        if len(values) != 4:  #check the number of details matches the number required
-            raise ValueError(f"Exactly 4 details required, you provided {len(values)}.")
-    
-        if not isinstance(int(values[3]), int):    #validate the par level (integer)
-            raise ValueError("Par level must be an integer")
+        if len(values) < 2:  #check the number of details matches the number required
+            raise ValueError(f"Exactly 1 product name required, you provided {len(values)} details.")
     
     except ValueError as e:
         print(f"Invalid data: {e}, please try again.\n")
@@ -138,20 +131,23 @@ def validate_data_add_product(values):
 
     return True
 
-new_product_data = get_new_product()
+deleted_product_data = get_deleted_product()
 
-'''
-def delete_product():
+def delete_product(deleted_product_data):
 
+    wines = SHEET.worksheet('wines')
     wine_list = wines.col_values(1)
     for product in range(len(wine_list)):
         print(wine_list[product])
 
     x = wine_list[product]
 
-    if cancelled_product = x:
-    worksheet.delete_row(x)
-'''
+    if deleted_product_data == x:
+        wines.delete_row(x)
+    
+# df[df['name'] != 'mixfruit']
+
+delete_product(deleted_product_data)
 
 #wines
 def get_current_stocks_data():
@@ -281,11 +277,11 @@ get_the_order_list_wines()
 #https://computinglearner.com/how-to-create-a-menu-for-a-python-console-application/?utm_content=cmp-true
  
 menu_options = {
-    1: '1. Print Product List',
-    2: '2. Add New Product',
-    3: '3. Delete Product',
-    4: '4. Get the Order List',
-    5: '5. Back to the Categories'
+    1: 'Print Product List',
+    2: 'Add New Product',
+    3: 'Delete Product',
+    4: 'Get the Order List',
+    5: 'Back to the main menu'
 }
 
 def print_menu():
@@ -320,7 +316,7 @@ if __name__=='__main__':
             print('Wrong input. Please enter a number ...')
         #Check what choice was entered and act accordingly
         if option == 1:
-           option1()
+           get_wine_product_list()
         elif option == 2:
             option2()
         elif option == 3:
@@ -334,22 +330,21 @@ if __name__=='__main__':
             print('Invalid option. Please enter a number between 1 and 5.')
 
 '''
+menu_options = {
+    1: 'Spirits',
+    2: 'Wines',
+    3: 'Beers',
+    4: 'Soft Drinks',
+    5: 'Exit'
+}
 # def menu():
     """
     First contact with the user, asks the user to select what they would like to do. Keep repeating until the 
     user decides to exit.
     """
-    while True:
-    
-        print('xy Menu - OrderEasy Application:\n')
-        print('1. Spirits')
-        print('2. Wines')
-        print('3. Beers')
-        print('4. Soft Drinks')
-        print('5. Exit')
-        print('\nPlease select what you would like to do  by entering a number between 1 and 4')
+        
 
-        option = input('Enter your number here:\n')
+
 
 # menu()
 '''

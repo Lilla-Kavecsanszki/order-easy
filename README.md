@@ -1,4 +1,9 @@
- #https://stackoverflow.com/questions/74665788/how-to-convert-string-to-number-in-python
+ my app:
+ https://order-easy-python-milestone.herokuapp.com/ 
+ 
+ 
+ 
+ https://stackoverflow.com/questions/74665788/how-to-convert-string-to-number-in-python
  how to convert data into integers and floats 
 
  https://docs.gspread.org/en/latest/user-guide.html#updating-cells
@@ -8,7 +13,7 @@
 
  https://stackoverflow.com/questions/30989213/can-i-control-the-output-of-insert-row-in-gspread
 
-checking data types
+ checking data types
  https://stackoverflow.com/questions/1549801/what-are-the-differences-between-type-and-isinstance
  https://stackoverflow.com/questions/1549801/what-are-the-differences-between-type-and-isinstance
 
@@ -17,8 +22,8 @@ checking data types
  Menu
  https://computinglearner.com/how-to-create-a-menu-for-a-python-console-application/?utm_content=cmp-true
 
+Delete a row that is containing a certain data
+https://stackoverflow.com/questions/55846401/if-row-in-dataframe-contains-certain-string-delete
 
 
- my app:
- https://order-easy-python-milestone.herokuapp.com/
 
