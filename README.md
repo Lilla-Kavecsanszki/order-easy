@@ -9,7 +9,7 @@
  https://docs.gspread.org/en/latest/user-guide.html#updating-cells
  How to update cells and work the spreadsheet
  https://docs.gspread.org/en/latest/user-guide.html#getting-all-values-from-a-row-or-a-column
- https://stackoverflow.com/questions/14625617/how-to-delete-remove-row-from-the-google-spreadsheet-using-gspread-lib-in-pytho
+ https://stackoverflow.com/questions/14625617/
 
  https://stackoverflow.com/questions/30989213/can-i-control-the-output-of-insert-row-in-gspread
 
@@ -23,7 +23,9 @@
  https://computinglearner.com/how-to-create-a-menu-for-a-python-console-application/?utm_content=cmp-true
 
 Delete a row that is containing a certain data
-https://stackoverflow.com/questions/55846401/if-row-in-dataframe-contains-certain-string-delete
+how-to-delete-remove-row-from-the-google-spreadsheet-using-gspread-lib-in-pytho
+https://docs.gspread.org/en/v5.3.0/api.html
+
 
 
 

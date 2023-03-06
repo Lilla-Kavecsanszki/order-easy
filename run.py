@@ -134,7 +134,11 @@ def validate_data_delete_product(values):
 deleted_product_data = get_deleted_product()
 
 def delete_product(deleted_product_data):
+    
+    cell = wines.find(deleted_product_data)
+    wines.delete_rows(cell.row)
 
+    '''
     wines = SHEET.worksheet('wines')
     wine_list = wines.col_values(1)
     for product in range(len(wine_list)):
@@ -146,6 +150,7 @@ def delete_product(deleted_product_data):
         wines.delete_row(x)
     
 # df[df['name'] != 'mixfruit']
+'''
 
 delete_product(deleted_product_data)
 
