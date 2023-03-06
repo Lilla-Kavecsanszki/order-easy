@@ -27,6 +27,7 @@ def get_wine_product_list():
     """
     Get the product list printed (wines) - option 1
     """
+    print('Collecting data...\n')
     wine_list = wines.col_values(1)
     for product in range(len(wine_list)):
         print(wine_list[product])
@@ -96,10 +97,8 @@ def option2():
     """
     Run all program functions for option 2
     """
-new_product_data = get_new_product()
-add_new_product(new_product_data)
-
-
+    new_product_data = get_new_product()
+    add_new_product(new_product_data)
 
 #Delete a product
 def get_deleted_product():
@@ -116,8 +115,6 @@ def get_deleted_product():
         print("Examlpe: Campari\n")
 
         deleting_product = input("Enter the name of the product here:\n")
-
-        print('Deleting product...')
 
         if validate_data_delete_product(deleting_product):
             print("Data for deleted product is valid")
@@ -142,7 +139,6 @@ def validate_data_delete_product(values):
 
     return True
 
-deleted_product_data = get_deleted_product()
 
 def delete_product(deleted_product_data):
     '''
@@ -150,10 +146,20 @@ def delete_product(deleted_product_data):
     entire row
     option 3
     '''
+    print("Deleting product on wines stocksheet...\n")
+
     cell = wines.find(deleted_product_data)
     wines.delete_rows(cell.row)
 
-delete_product(deleted_product_data)
+    print("Wines stocksheet updated successfully.\n")
+
+def option3():
+    """
+    Run all program functions for option 2
+    """
+    deleted_product_data = get_deleted_product()
+    delete_product(deleted_product_data)
+
 
 #wines
 def get_current_stocks_data():
@@ -276,15 +282,15 @@ def get_the_order_list_wines():
     Run all program functions for option 4
     """
 
-data = get_current_stocks_data()
-current_stocks_data = [int(num) if num.isdigit() else float(num)for num in data]
-update_stocks_countsheet(current_stocks_data)
-show_date()  #show current date when update the stock levels
-new_order_amount_counts = howmuch_to_order(current_stocks_data)
-update_order_list_sheet(new_order_amount_counts)
-print_order_list_wines()
+    data = get_current_stocks_data()
+    current_stocks_data = [int(num) if num.isdigit() else float(num)for num in data]
+    update_stocks_countsheet(current_stocks_data)
+    show_date()  #show current date when update the stock levels
+    new_order_amount_counts = howmuch_to_order(current_stocks_data)
+    update_order_list_sheet(new_order_amount_counts)
+    print_order_list_wines()
 
-get_the_order_list_wines()
+# get_the_order_list_wines()
 
 
 #https://computinglearner.com/how-to-create-a-menu-for-a-python-console-application/?utm_content=cmp-true
@@ -304,21 +310,15 @@ def print_menu():
     for key in menu_options.keys():
         print (key, '--', menu_options[key] )
 
-
-
-
-def option4():
-     print('Handle option \'Option 4\'')
-
-print('Sub-Menu - OrderEasy Application:\n')
-print('\nPlease select what you would like to do by entering a number between 1 and 5')
+print('\nSub-Menu - OrderEasy Application:\n')
+print('Please select what you would like to do by entering a number between 1 and 5\n')
 
 if __name__=='__main__':
     while(True):
         print_menu()
         option = ''
         try:
-            option = int(input('Enter your number here:\n'))
+            option = int(input('\nEnter your number here:\n'))
         except:
             print('Wrong input. Please enter a number ...')
         #Check what choice was entered and act accordingly
@@ -329,7 +329,7 @@ if __name__=='__main__':
         elif option == 3:
             option3()
         elif option == 4:
-            option4()
+            get_the_order_list_wines()
         elif option == 5:
             print('Thank You, Goodbye!')
             exit()
@@ -350,8 +350,5 @@ menu_options = {
     user decides to exit.
     """
         
-
-
-
 # menu()
 '''
