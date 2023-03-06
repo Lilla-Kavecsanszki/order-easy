@@ -25,7 +25,7 @@ soft_drink_stock= soft_drinks.get_all_values()
 
 def get_wine_product_list():
     """
-    Get the product list printed (wines)
+    Get the product list printed (wines) - option 1
     """
     wine_list = wines.col_values(1)
     for product in range(len(wine_list)):
@@ -38,6 +38,7 @@ def get_new_product():
     Get new product details input from the user,
     running a while loop, to get a valid string of data, which must be a string of 4 details separeted by 
     commas. The loop will keep repeating the request until gets the valid data
+    option 2
     """
     while True:
 
@@ -60,6 +61,7 @@ def get_new_product():
 def validate_data_add_product(values):
     '''
     Validates the list of user input for the new product
+    option 2
     '''
     print('Validating input details...\n')
        
@@ -76,12 +78,11 @@ def validate_data_add_product(values):
 
     return True
 
-new_product_data = get_new_product()
-
+# new_product_data = get_new_product()
 
 def add_new_product(new_product_data):
     '''
-    Updates the worksheet with the details of the new product
+    Updates the worksheet with the details of the new product - option 2
     '''
     print("Updating wines stocksheet...\n")
     wines = SHEET.worksheet('wines')
@@ -89,7 +90,16 @@ def add_new_product(new_product_data):
     
     print("Wines stocksheet updated successfully.\n")
 
+# add_new_product(new_product_data)
+
+def option2():
+    """
+    Run all program functions for option 2
+    """
+new_product_data = get_new_product()
 add_new_product(new_product_data)
+
+
 
 #Delete a product
 def get_deleted_product():
@@ -97,6 +107,7 @@ def get_deleted_product():
     Get deleted product details input from the user,
     running a while loop, to get a valid string of data, which must be a string of 1 value. The loop will keep repeating 
     the request until gets the valid data
+    option 3
     """
     while True:
 
@@ -117,7 +128,7 @@ def get_deleted_product():
 
 def validate_data_delete_product(values):
     '''
-    Validates the list of user input for the deleted product
+    Validates the list of user input for the deleted product - option 3
     '''
     print('Validating input details...\n')
        
@@ -134,23 +145,13 @@ def validate_data_delete_product(values):
 deleted_product_data = get_deleted_product()
 
 def delete_product(deleted_product_data):
-    
+    '''
+    Finds the cell that is matching with the validated user input, than updates the worksheet based on that. Deletes the 
+    entire row
+    option 3
+    '''
     cell = wines.find(deleted_product_data)
     wines.delete_rows(cell.row)
-
-    '''
-    wines = SHEET.worksheet('wines')
-    wine_list = wines.col_values(1)
-    for product in range(len(wine_list)):
-        print(wine_list[product])
-
-    x = wine_list[product]
-
-    if deleted_product_data == x:
-        wines.delete_row(x)
-    
-# df[df['name'] != 'mixfruit']
-'''
 
 delete_product(deleted_product_data)
 
@@ -160,6 +161,7 @@ def get_current_stocks_data():
     Get current stock holoding figures input from the user,
     running a while loop, to get a valid string of data, which must be a string of 6 whole or float numbers separeted by 
     commas. The loop will keep repeating the request until gets the valid data
+    option 4
     """
     while True:
 
@@ -182,6 +184,7 @@ def validate_data(values):
     Inside the try, make sure all the string values are numbers, 
     raises ValueError, if strings are not numbers, 
     or if there are not exactly 7 values
+    option 4
     """
 
     #https://stackoverflow.com/questions/74665788/how-to-convert-string-to-number-in-python
@@ -197,6 +200,9 @@ def validate_data(values):
     return True
 
 def show_date():
+    '''
+    Updates the date to show today's date each times the user inputs a new entry - option 4
+    '''
     wines_countsheet = SHEET.worksheet('wines')
     the_date = datetime.now().date()
     
@@ -206,7 +212,7 @@ def show_date():
 
 def update_stocks_countsheet(data):
     """
-    Update stocks worksheet, add new column with the list of data provided
+    Update stocks worksheet, add new column with the list of data provided - option 4
     """
     print("Updating stocks countsheet...\n")
     wines_countsheet = SHEET.worksheet('wines')
@@ -223,6 +229,7 @@ def update_stocks_countsheet(data):
 def update_order_list_sheet(new_order_amount_counts):
     """
     Update order amounts on the worksheet, add new column with the list of new order amount counts calculated
+    option 4
     """
     print("Updating order list...\n")
     wines_order = SHEET.worksheet('wines')
@@ -237,6 +244,7 @@ def howmuch_to_order(current_stocks_data_column):
     Calculate the order list by minusing the current stock holding number from the par level number. The par level indicates how 
     much of the certain product we should have. We need to order the difference. If we got a minus number as our result, that means
     we have too many of the noted product on stock and no need to order.
+    option 4
     """
     print("Collecting order list...\n")
 
@@ -252,7 +260,7 @@ def howmuch_to_order(current_stocks_data_column):
 def print_order_list_wines():
     """
     Printing out the list of products and relevantly their information that indicates how much the user needs to order 
-    (wines)
+    (wines) - option 4
     """
     print("Collecting order list and details...\n")
 
@@ -265,7 +273,7 @@ def print_order_list_wines():
 
 def get_the_order_list_wines():
     """
-    Run all program functions for the ordering information
+    Run all program functions for option 4
     """
 
 data = get_current_stocks_data()
@@ -296,14 +304,8 @@ def print_menu():
     for key in menu_options.keys():
         print (key, '--', menu_options[key] )
 
-def option1():
-     print('Handle option \'Option 1\'')
 
-def option2():
-     print('Handle option \'Option 2\'')
 
-def option3():
-     print('Handle option \'Option 3\'')
 
 def option4():
      print('Handle option \'Option 4\'')
