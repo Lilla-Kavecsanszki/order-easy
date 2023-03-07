@@ -147,11 +147,12 @@ def delete_product(deleted_product_data):
     option 3
     '''
     print("Deleting product on wines stocksheet...\n")
-
+   
     cell = wines.find(deleted_product_data)
     wines.delete_rows(cell.row)
 
     print("Wines stocksheet updated successfully.\n")
+
 
 def option3():
     """
@@ -344,11 +345,11 @@ menu_options = {
     4: 'Soft Drinks',
     5: 'Exit'
 }
-# def menu():
+# def main():
     """
     First contact with the user, asks the user to select what they would like to do. Keep repeating until the 
     user decides to exit.
     """
         
-# menu()
+# main()
 '''
