@@ -24,33 +24,29 @@ The customer goals of this website are:
 
 # Contents
 
-- [User Experience (UX)](https://github.com/Lilla-Kavecsanszki/friends-quiz#user-experience-ux)
-- [Ideal client](https://github.com/Lilla-Kavecsanszki/friends-quiz#ideal-client)
-- [User stories](https://github.com/Lilla-Kavecsanszki/friends-quiz#user-stories)
-- [Wireframes](https://github.com/Lilla-Kavecsanszki/friends-quiz#wireframes)
-- [Accessibility](https://github.com/Lilla-Kavecsanszki/friends-quiz#accessibility)
-- [Design](https://github.com/Lilla-Kavecsanszki/friends-quiz#design)
-  - [Colour Scheme](https://github.com/Lilla-Kavecsanszki/friends-quiz#colour-scheme)
-  - [Typography](https://github.com/Lilla-Kavecsanszki/friends-quiz#typography)
-- [Languages Used](https://github.com/Lilla-Kavecsanszki/friends-quiz#languages-used)
-- [Technologies Used](https://github.com/Lilla-Kavecsanszki/friends-quiz#technologies-used)
-- [Features](https://github.com/Lilla-Kavecsanszki/friends-quiz#features)
+- [User Experience (UX)](https://github.com/Lilla-Kavecsanszki/order-easy#user-experience-ux)
+- [Ideal client](https://github.com/Lilla-Kavecsanszki/order-easy#ideal-client)
+- [User stories](https://github.com/Lilla-Kavecsanszki/order-easy#user-stories)
+- [Wireframes](https://github.com/Lilla-Kavecsanszki/order-easy#wireframes---chart)
+- [Accessibility](https://github.com/Lilla-Kavecsanszki/order-easy#accessibility)
+- [Languages Used](https://github.com/Lilla-Kavecsanszki/order-easy#languages-used)
+- [Technologies Used](https://github.com/Lilla-Kavecsanszki/order-easy#technologies-used)
+- [Features](https://github.com/Lilla-Kavecsanszki/order-easy#features)
   - [Home](https://github.com/Lilla-Kavecsanszki/friends-quiz#home)
   - [How to Play?](https://github.com/Lilla-Kavecsanszki/friends-quiz#how-to-play)
-- [Deployment](https://github.com/Lilla-Kavecsanszki/friends-quiz#deployment)
-- [Local Deployment](https://github.com/Lilla-Kavecsanszki/friends-quiz#local-deployment)
-  - [How to Clone](https://github.com/Lilla-Kavecsanszki/friends-quiz#how-to-clone)
-  - [How to Fork](https://github.com/Lilla-Kavecsanszki/friends-quiz#how-to-fork)
-- [Testing](https://github.com/Lilla-Kavecsanszki/friends-quiz#testing)
-  - [Manual Testing](https://github.com/Lilla-Kavecsanszki/friends-quiz#manual-testing)
-  - [User Stories Testing](https://github.com/Lilla-Kavecsanszki/friends-quiz#user-stories-testing)
-  - [Further Testing](https://github.com/Lilla-Kavecsanszki/friends-quiz#further-testing)
-  - [Bugs](https://github.com/Lilla-Kavecsanszki/friends-quiz#bugs)
-- [Credits](https://github.com/Lilla-Kavecsanszki/friends-quiz#credits)
-  - [Content](https://github.com/Lilla-Kavecsanszki/friends-quiz#content)
-  - [Media](https://github.com/Lilla-Kavecsanszki/friends-quiz#media)
-  - [Acknowledgments and Code](https://github.com/Lilla-Kavecsanszki/friends-quiz#acknowledgments-and-code)
-  - [Disclaimer](https://github.com/Lilla-Kavecsanszki/friends-quiz#disclaimer)
+- [Deployment](https://github.com/Lilla-Kavecsanszki/order-easy#deployment)
+- [Local Deployment](https://github.com/Lilla-Kavecsanszki/order-easy#local-deployment)
+  - [How to Clone](https://github.com/Lilla-Kavecsanszki/order-easy#how-to-clone)
+  - [How to Fork](https://github.com/Lilla-Kavecsanszki/order-easy#how-to-fork)
+- [Testing](https://github.com/Lilla-Kavecsanszki/order-easy#testing)
+  - [Manual Testing](https://github.com/Lilla-Kavecsanszki/order-easy#manual-testing)
+  - [User Stories Testing](https://github.com/Lilla-Kavecsanszki/order-easy#user-stories-testing)
+  - [Further Testing](https://github.com/Lilla-Kavecsanszki/order-easy#further-testing)
+  - [Bugs](https://github.com/Lilla-Kavecsanszki/order-easy#bugs)
+- [Credits](https://github.com/Lilla-Kavecsanszki/order-easy#credits)
+  - [Content](https://github.com/Lilla-Kavecsanszki/order-easy#content)
+  - [Acknowledgments and Code](https://github.com/Lilla-Kavecsanszki/order-easy#acknowledgments-and-code)
+  - [Disclaimer](https://github.com/Lilla-Kavecsanszki/order-easy#disclaimer)
 
 
 # User Experience (UX)
@@ -83,7 +79,7 @@ This website:
 -	...
 
 
-[Back to top](https://github.com/Lilla-Kavecsanszki/friends-quiz#contents)
+[Back to top](https://github.com/Lilla-Kavecsanszki/order-easy#contents)
 
 ### User stories
 
@@ -94,7 +90,7 @@ This website:
     from her on social media and industry-relevant sites.
 
 
-[Back to top](https://github.com/Lilla-Kavecsanszki/friends-quiz#contents)
+[Back to top](https://github.com/Lilla-Kavecsanszki/order-easy#contents)
 
 # Wireframes - Chart
 
@@ -106,7 +102,7 @@ Home page
 
 ![How to play? page wireframe](readme-images/wireframe-howtoplaypage.png "How to play? page wireframe")
 
-[Back to top](https://github.com/Lilla-Kavecsanszki/friends-quiz#contents)
+[Back to top](https://github.com/Lilla-Kavecsanszki/order-easy#contents)
 
 # Accessibility
 
@@ -121,13 +117,13 @@ I used [A11y](https://color.a11y.com) the Color Contrast Accessibility Validator
 
 ![A11y Test](readme-images/a11y-test.png "A11y Test")
 
-[Back to top](https://github.com/Lilla-Kavecsanszki/friends-quiz#contents)
+[Back to top](https://github.com/Lilla-Kavecsanszki/order-easy#contents)
 
 # Languages Used
 
 Python was used to complete this project.
 
-[Back to top](https://github.com/Lilla-Kavecsanszki/friends-quiz#contents)
+[Back to top](https://github.com/Lilla-Kavecsanszki/order-easy#contents)
 
 # Technologies Used
 
@@ -137,7 +133,7 @@ Python was used to complete this project.
 - Google Chrome Developer Tools was used for debugging and testing with Lighthouse
 - Heroku...
 
-[Back to top](https://github.com/Lilla-Kavecsanszki/friends-quiz#contents)
+[Back to top](https://github.com/Lilla-Kavecsanszki/order-easy#contents)
 
 # Features
 
@@ -219,7 +215,7 @@ Under the instructions section, there is ...
 ![Turkey](readme-images/turkey.png "Turkey")
 
 
-[Back to top](https://github.com/Lilla-Kavecsanszki/friends-quiz#contents)
+[Back to top](https://github.com/Lilla-Kavecsanszki/order-easy#contents)
 
 # Deployment
 
@@ -233,7 +229,7 @@ The Friends Quiz website is deployed using Github Pages, this was done by:
     main, and the folder option to /root
 6.	Click save, wait a few minutes and the Friends quiz website is now deployed at the URL displayed
 
-[Back to top](https://github.com/Lilla-Kavecsanszki/friends-quiz#contents)
+[Back to top](https://github.com/Lilla-Kavecsanszki/order-easy#contents)
 
 # Local Deployment
 
@@ -241,13 +237,13 @@ The Friends Quiz website is deployed using Github Pages, this was done by:
 
 Locate the main page of friends-quiz repository, click the Code button to the left of the green Gitpod button, then choose Local. Copy the URL of the repository, you can click on headings for HTTPS, SSH, and Github CLI to find their individual links. Open your own terminal in your editor and change the current working directory to the location of where you want the cloned directory to be. In the terminal type git clone, and then paste the URL you copied from friends-quiz repository page. Press enter to complete.
 
-[Back to top](https://github.com/Lilla-Kavecsanszki/friends-quiz#contents)
+[Back to top](https://github.com/Lilla-Kavecsanszki/order-easy#contents)
 
 ## How to Fork
 
 Locate the main page of friends-quiz repository. Click the fork button in the top right of the screen, between the watch, and the star buttons.
 
-[Back to top](https://github.com/Lilla-Kavecsanszki/friends-quiz#contents)
+[Back to top](https://github.com/Lilla-Kavecsanszki/order-easy#contents)
 
 # Testing
 
@@ -271,7 +267,7 @@ JS Validator results on the data.js file
 
 ![JS Validator data](readme-images/jsvalidator-data.png "JS Validator data")
 
-[Back to top](https://github.com/Lilla-Kavecsanszki/friends-quiz#contents)
+[Back to top](https://github.com/Lilla-Kavecsanszki/order-easy#contents)
 
 ## Manual Testing
 
@@ -293,7 +289,7 @@ respond correctly and look good on all device widths.
 
 Review all functionality and responsiveness on my mobile phone and tablet for all pages.
 
-[Back to top](https://github.com/Lilla-Kavecsanszki/friends-quiz#contents)
+[Back to top](https://github.com/Lilla-Kavecsanszki/order-easy#contents)
 
 ## User Stories Testing 
 
@@ -327,13 +323,13 @@ Review all functionality and responsiveness on my mobile phone and tablet for al
     
     ![Social media](readme-images/4.%20userstory.png "Social media").  
 
-[Back to top](https://github.com/Lilla-Kavecsanszki/friends-quiz#contents)
+[Back to top](https://github.com/Lilla-Kavecsanszki/order-easy#contents)
 
 ## Further testing
 
 I asked friends and family to look at the site on their devices and browsers and report any issues they find. The height of the logo image was adjusted as a result of this on the Home page and also in media queries respectively. It was covering the let’s start button, the audio control buttons and the Rachel button in the middle of the page, therefore those didn’t work until the issue was resolved.
 
-[Back to top](https://github.com/Lilla-Kavecsanszki/friends-quiz#contents)
+[Back to top](https://github.com/Lilla-Kavecsanszki/order-easy#contents)
 
 ## Bugs
 
@@ -344,7 +340,7 @@ A few issues came up while testing the website in the meantime;
 3. The questions also didn't restart if I wanted to play a new game with the same character as I previously did. This was resolved by the spread operator (...character.questions). Without this the code was pointing to the questions in the original array and later on with using splice method that was deleting the questions from the original array, therefore we had no questions left. So to restart the game for the same character, the spread operator creates a copy of the original array. 
 4. While testing the quiz on mobile-sized screens, The let's start button, audio buttons and the Rachel button didn't work. This issue was resolved by adjusting the height of the logo-image (in media queries) as that was covering the mentioned buttons before. 
 
-[Back to top](https://github.com/Lilla-Kavecsanszki/friends-quiz#contents)
+[Back to top](https://github.com/Lilla-Kavecsanszki/order-easy#contents)
 
 # Credits
 
@@ -354,7 +350,7 @@ A few issues came up while testing the website in the meantime;
 The text for the 'How to Play?' page and the content for the quiz games were a creative work of Georgina Kavecsanszki. 
 
 
-[Back to top](https://github.com/Lilla-Kavecsanszki/friends-quiz#contents)
+[Back to top](https://github.com/Lilla-Kavecsanszki/order-easy#contents)
 
 
 
@@ -395,4 +391,4 @@ https://docs.gspread.org/en/v5.3.0/api.html
 
 This application is for educational use only.
 
-[Back to top](https://github.com/Lilla-Kavecsanszki/friends-quiz#contents)
+[Back to top](https://github.com/Lilla-Kavecsanszki/order-easy#contents)
