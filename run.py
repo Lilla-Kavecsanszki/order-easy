@@ -58,6 +58,11 @@ def get_new_product():
 
     return new_product
 
+def get_number_of_rows():
+    wines = SHEET.worksheet('wines')
+    number_of_rows = len(wines.col_values(1)) - 1
+    print(number_of_rows)
+get_number_of_rows()
 
 def validate_data_add_product(values):
     '''
