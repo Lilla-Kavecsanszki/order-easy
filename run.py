@@ -58,12 +58,6 @@ def get_new_product():
 
     return new_product
 
-def get_number_of_rows():
-    wines = SHEET.worksheet('wines')
-    number_of_rows = len(wines.col_values(1)) - 1
-    print(number_of_rows)
-get_number_of_rows()
-
 def validate_data_add_product(values):
     '''
     Validates the list of user input for the new product
@@ -168,6 +162,16 @@ def option3():
 
 
 #wines
+def get_number_of_rows():
+    '''
+    Fetch the number of products there is on stock at the moment
+    '''
+    wines = SHEET.worksheet('wines')
+    number_of_rows = len(wines.col_values(1)) - 1
+    return number_of_rows
+
+products = get_number_of_rows()
+
 def get_current_stocks_data():
     """
     Get current stock holoding figures input from the user,
@@ -178,13 +182,13 @@ def get_current_stocks_data():
     while True:
 
         print("Please enter current stock data.") 
-        print("Data should be 7 numbers, separated by commas.")
+        print(f"Data should be {products} numbers, separated by commas.")
         print("Examlpe: 12,23,34,36,46,37,49\n")
 
         data_str = input("Enter your numbers here:\n")
 
         current_stock = data_str.split(",")
-        
+        print(current_stock)
         if validate_data(current_stock):
             print("Data is valid")
             break
@@ -202,9 +206,11 @@ def validate_data(values):
     #https://stackoverflow.com/questions/74665788/how-to-convert-string-to-number-in-python
     try:
         [int(value) if value.isdigit() else float(value) for value in values]
-        if len(values) != 7:
+        print(products)
+        print(len(values))
+        if len(values) != products:
             raise ValueError(
-                f"Exactly 7 numbers required, you provided {len(values)}. If an item has run out completely, put 0")
+                f"Exactly {products} numbers required, you provided {len(values)}. If an item has run out completely, put 0")
     except ValueError as e:
         print(f"Invalid data: {e}, please try again.\n")
         return False
