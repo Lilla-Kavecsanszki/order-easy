@@ -78,8 +78,6 @@ def validate_data_add_product(values):
 
     return True
 
-# new_product_data = get_new_product()
-
 def add_new_product(new_product_data):
     '''
     Updates the worksheet with the details of the new product - option 2
@@ -89,8 +87,6 @@ def add_new_product(new_product_data):
     wines.append_row(new_product_data)
     
     print("Wines stocksheet updated successfully.\n")
-
-# add_new_product(new_product_data)
 
 def option2():
     """
@@ -146,12 +142,13 @@ def delete_product(deleted_product_data):
     option 3
     '''
     print("Deleting product on wines stocksheet...\n")
-   
+
     cell = wines.find(deleted_product_data)
-    wines.delete_rows(cell.row)
-
-    print("Wines stocksheet updated successfully.\n")
-
+    if cell is not None:
+        wines.delete_rows(cell.row)
+        print("Wines stocksheet updated successfully.\n")
+    else:
+        print("Sorry, this product is not currently on stock")
 
 def option3():
     """
@@ -159,7 +156,6 @@ def option3():
     """
     deleted_product_data = get_deleted_product()
     delete_product(deleted_product_data)
-
 
 #wines
 def get_list_of_products():
@@ -186,7 +182,6 @@ def get_current_stocks_data():
         data_str = input("Enter your numbers here:\n")
 
         current_stock = data_str.split(",")
-        print(current_stock)
         if validate_data(current_stock):
             print("Data is valid")
             break
@@ -205,8 +200,6 @@ def validate_data(values):
     try:
         [int(value) if value.isdigit() else float(value) for value in values]
     
-        print(get_list_of_products())
-        print(len(values))
         if len(values) != get_list_of_products():
             raise ValueError(
                 f"Exactly {get_list_of_products()} numbers required, you provided {len(values)}. If an item has run out completely, put 0")
@@ -233,9 +226,6 @@ def update_stocks_countsheet(data):
     """
     print("Updating stocks countsheet...\n")
     wines_countsheet = SHEET.worksheet('wines')
-
-   # stock_column = wines_countsheet.col_values(5)
-   # stock_column.pop(0)
 
     for ind in range(len(data)):
         wines_countsheet.update_cell(ind+2, 5, data[ind])
@@ -300,9 +290,6 @@ def get_the_order_list_wines():
     update_order_list_sheet(new_order_amount_counts)
     print_order_list_wines()
 
-# get_the_order_list_wines()
-
-
 #https://computinglearner.com/how-to-create-a-menu-for-a-python-console-application/?utm_content=cmp-true
  
 menu_options = {
@@ -310,7 +297,7 @@ menu_options = {
     2: 'Add New Product',
     3: 'Delete Product',
     4: 'Get the Order List',
-    5: 'Back to the main menu'
+    5: 'Exit'
 }
 
 def print_menu():
@@ -320,7 +307,7 @@ def print_menu():
     for key in menu_options.keys():
         print (key, '--', menu_options[key] )
 
-print('\nSub-Menu - OrderEasy Application:\n')
+print('\nMenu - OrderEasy Application:\n')
 print('Please select what you would like to do by entering a number between 1 and 5\n')
 
 if __name__=='__main__':
@@ -346,19 +333,3 @@ if __name__=='__main__':
         else:
             print('Invalid option. Please enter a number between 1 and 5.')
 
-'''
-menu_options = {
-    1: 'Spirits',
-    2: 'Wines',
-    3: 'Beers',
-    4: 'Soft Drinks',
-    5: 'Exit'
-}
-# def main():
-    """
-    First contact with the user, asks the user to select what they would like to do. Keep repeating until the 
-    user decides to exit.
-    """
-        
-# main()
-'''
