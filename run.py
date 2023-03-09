@@ -162,7 +162,7 @@ def option3():
 
 
 #wines
-def get_number_of_rows():
+def get_list_of_products():
     '''
     Fetch the number of products there is on stock at the moment
     '''
@@ -170,20 +170,18 @@ def get_number_of_rows():
     number_of_rows = len(wines.col_values(1)) - 1
     return number_of_rows
 
-products = get_number_of_rows()
-
 def get_current_stocks_data():
     """
     Get current stock holoding figures input from the user,
-    running a while loop, to get a valid string of data, which must be a string of 6 whole or float numbers separeted by 
+    running a while loop, to get a valid string of data, which must be a string of certain amount of whole or float numbers separeted by 
     commas. The loop will keep repeating the request until gets the valid data
     option 4
     """
     while True:
 
         print("Please enter current stock data.") 
-        print(f"Data should be {products} numbers, separated by commas.")
-        print("Examlpe: 12,23,34,36,46,37,49\n")
+        print(f"Data should be {get_list_of_products()} numbers, separated by commas.")
+        print("Examlpe: 8,12,0.8,3.6,18,22,etc\n")
 
         data_str = input("Enter your numbers here:\n")
 
@@ -206,11 +204,12 @@ def validate_data(values):
     #https://stackoverflow.com/questions/74665788/how-to-convert-string-to-number-in-python
     try:
         [int(value) if value.isdigit() else float(value) for value in values]
-        print(products)
+    
+        print(get_list_of_products())
         print(len(values))
-        if len(values) != products:
+        if len(values) != get_list_of_products():
             raise ValueError(
-                f"Exactly {products} numbers required, you provided {len(values)}. If an item has run out completely, put 0")
+                f"Exactly {get_list_of_products()} numbers required, you provided {len(values)}. If an item has run out completely, put 0")
     except ValueError as e:
         print(f"Invalid data: {e}, please try again.\n")
         return False
@@ -293,7 +292,6 @@ def get_the_order_list_wines():
     """
     Run all program functions for option 4
     """
-
     data = get_current_stocks_data()
     current_stocks_data = [int(num) if num.isdigit() else float(num)for num in data]
     update_stocks_countsheet(current_stocks_data)
