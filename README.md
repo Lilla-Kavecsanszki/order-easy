@@ -383,6 +383,9 @@ https://stackoverflow.com/questions/65313107/python-google-sheets-api-searching-
 https://stackoverflow.com/questions/61599272/google-sheets-search-column-for-value-using-python
 https://docs.gspread.org/en/v5.3.0/api.html
 
+Print into table format - order results
+https://www.geeksforgeeks.org/how-to-make-a-table-in-python/
+
 .
 .
 .

@@ -1,6 +1,7 @@
 import gspread
 from google.oauth2.service_account import Credentials
 from datetime import datetime
+from tabulate import tabulate
 
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
@@ -298,7 +299,8 @@ def print_order_list():
     for item in range(len(product_order)):
         print(product_order[item])
 
-    x = product_order[item]
+    x = [product_order[item]]
+    print(tabulate(x, headers="firstrow", tablefmt="grid"))
 
 
 def get_the_order_list():
