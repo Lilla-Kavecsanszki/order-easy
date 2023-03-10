@@ -79,7 +79,7 @@ def add_new_product(new_product_data):
     stock_sheet = SHEET.worksheet('stocks')
     stock_sheet.append_row(new_product_data)
     
-    print("Stocksheet updated successfully.\n")
+    print("Stocksheet updated successfully.")
 
 def add_new_product_to_stock():
     """
@@ -139,7 +139,7 @@ def delete_product(deleted_product_data):
     cell = stock_sheet.find(deleted_product_data)
     if cell is not None:
         stock_sheet.delete_rows(cell.row)
-        print("Stocksheet updated successfully.\n")
+        print("Stocksheet updated successfully.")
     else:
         print("Sorry, this product is not currently on stock")
 
@@ -297,11 +297,11 @@ def print_menu():
     """
     Asks the user to select what they would like to do. Keep repeating until the user decides to go back to the main menu.
     """
+    print('\nMenu - OrderEasy Application:\n')
+    print('Please select what you would like to do by entering a number between 1 and 5\n')
+
     for key in menu_options.keys():
         print (key, '--', menu_options[key] )
-
-print('\nMenu - OrderEasy Application:\n')
-print('Please select what you would like to do by entering a number between 1 and 5\n')
 
 if __name__=='__main__':
     while(True):
@@ -321,7 +321,7 @@ if __name__=='__main__':
         elif option == 4:
             get_the_order_list()
         elif option == 5:
-            print('Thank You, Goodbye!')
+            print('Thank You, Goodbye!\n')
             exit()
         else:
             print('Invalid option. Please enter a number between 1 and 5.')
