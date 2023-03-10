@@ -14,9 +14,7 @@ GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('order_spreadsheet')
 
 stock_sheet = SHEET.worksheet('stocks')
-#spirit_stock = spirits.get_all_values()
 all_stock = stock_sheet.get_all_values()
-
 
 def get_all_product_list():
     """
@@ -83,7 +81,7 @@ def add_new_product(new_product_data):
     
     print("Stocksheet updated successfully.\n")
 
-def option2():
+def add_new_product_to_stock():
     """
     Run all program functions for option 2
     """
@@ -145,9 +143,9 @@ def delete_product(deleted_product_data):
     else:
         print("Sorry, this product is not currently on stock")
 
-def option3():
+def remove_product_from_stock():
     """
-    Run all program functions for option 2
+    Run all program functions for option 3
     """
     deleted_product_data = get_deleted_product()
     delete_product(deleted_product_data)
@@ -155,6 +153,7 @@ def option3():
 def get_list_of_products():
     '''
     Fetch the number of products there is on stock at the moment
+    option 4
     '''
     stock_sheet = SHEET.worksheet('stocks')
     number_of_rows = len(stock_sheet.col_values(1)) - 1
@@ -316,9 +315,9 @@ if __name__=='__main__':
         if option == 1:
            get_all_product_list()
         elif option == 2:
-            option2()
+            add_new_product_to_stock()
         elif option == 3:
-            option3()
+            remove_product_from_stock()
         elif option == 4:
             get_the_order_list()
         elif option == 5:
