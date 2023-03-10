@@ -297,7 +297,7 @@ def print_order_list():
     product_order = stock_sheet.get_all_values()
 
     for item in range(len(product_order)):
-       # print(product_order[item])
+        # print(product_order[item])
         x = [product_order[item]]
     print(tabulate(product_order, headers="firstrow", tablefmt="grid"))
 
