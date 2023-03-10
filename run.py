@@ -13,26 +13,21 @@ SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('order_spreadsheet')
 
-spirits = SHEET.worksheet('spirits')
-wines = SHEET.worksheet('wines')
-beers = SHEET.worksheet('beers')
-soft_drinks = SHEET.worksheet('soft_drinks')
+stock_sheet = SHEET.worksheet('stocks')
+#spirit_stock = spirits.get_all_values()
+all_stock = stock_sheet.get_all_values()
 
-spirit_stock = spirits.get_all_values()
-wine_stock = wines.get_all_values()
-beer_stock = beers.get_all_values()
-soft_drink_stock= soft_drinks.get_all_values()
 
-def get_wine_product_list():
+def get_all_product_list():
     """
-    Get the product list printed (wines) - option 1
+    Get the product list printed - option 1
     """
     print('Collecting data...\n')
-    wine_list = wines.col_values(1)
-    for product in range(len(wine_list)):
-        print(wine_list[product])
+    stock_list = stock_sheet.col_values(1)
+    for product in range(len(stock_list)):
+        print(stock_list[product])
 
-    x = wine_list[product]
+    x = stock_list[product]
 
 def get_new_product():
     """
@@ -82,11 +77,11 @@ def add_new_product(new_product_data):
     '''
     Updates the worksheet with the details of the new product - option 2
     '''
-    print("Updating wines stocksheet...\n")
-    wines = SHEET.worksheet('wines')
-    wines.append_row(new_product_data)
+    print("Updating stocksheet...\n")
+    stock_sheet = SHEET.worksheet('stocks')
+    stock_sheet.append_row(new_product_data)
     
-    print("Wines stocksheet updated successfully.\n")
+    print("Stocksheet updated successfully.\n")
 
 def option2():
     """
@@ -141,12 +136,12 @@ def delete_product(deleted_product_data):
     entire row
     option 3
     '''
-    print("Deleting product on wines stocksheet...\n")
+    print("Deleting product on stocksheet...\n")
 
-    cell = wines.find(deleted_product_data)
+    cell = stock_sheet.find(deleted_product_data)
     if cell is not None:
-        wines.delete_rows(cell.row)
-        print("Wines stocksheet updated successfully.\n")
+        stock_sheet.delete_rows(cell.row)
+        print("Stocksheet updated successfully.\n")
     else:
         print("Sorry, this product is not currently on stock")
 
@@ -157,13 +152,12 @@ def option3():
     deleted_product_data = get_deleted_product()
     delete_product(deleted_product_data)
 
-#wines
 def get_list_of_products():
     '''
     Fetch the number of products there is on stock at the moment
     '''
-    wines = SHEET.worksheet('wines')
-    number_of_rows = len(wines.col_values(1)) - 1
+    stock_sheet = SHEET.worksheet('stocks')
+    number_of_rows = len(stock_sheet.col_values(1)) - 1
     return number_of_rows
 
 def get_current_stocks_data():
@@ -213,11 +207,11 @@ def show_date():
     '''
     Updates the date to show today's date each times the user inputs a new entry - option 4
     '''
-    wines_countsheet = SHEET.worksheet('wines')
+    countsheet = SHEET.worksheet('stocks')
     the_date = datetime.now().date()
     
     x = f'Current Stock Holding {the_date}'
-    wines_countsheet.update_cell(1, 5, x)
+    countsheet.update_cell(1, 5, x)
     print(x)
 
 def update_stocks_countsheet(data):
@@ -225,12 +219,12 @@ def update_stocks_countsheet(data):
     Update stocks worksheet, add new column with the list of data provided - option 4
     """
     print("Updating stocks countsheet...\n")
-    wines_countsheet = SHEET.worksheet('wines')
+    countsheet = SHEET.worksheet('stocks')
 
     for ind in range(len(data)):
-        wines_countsheet.update_cell(ind+2, 5, data[ind])
+        countsheet.update_cell(ind+2, 5, data[ind])
 
-    print("Wine stocks countsheet updated successfully.\n")
+    print("Stocks countsheet updated successfully.\n")
     
 
 def update_order_list_sheet(new_order_amount_counts):
@@ -239,10 +233,10 @@ def update_order_list_sheet(new_order_amount_counts):
     option 4
     """
     print("Updating order list...\n")
-    wines_order = SHEET.worksheet('wines')
+    order = SHEET.worksheet('stocks')
     
     for amount in range(len(new_order_amount_counts)):
-        wines_order.update_cell(amount+2, 6, new_order_amount_counts[amount])
+        order.update_cell(amount+2, 6, new_order_amount_counts[amount])
 
     print("Order list updated successfully.\n")   
 
@@ -255,7 +249,7 @@ def howmuch_to_order(current_stocks_data_column):
     """
     print("Collecting order list...\n")
 
-    par_level = wines.col_values(4)
+    par_level = stock_sheet.col_values(4)
     par_level.pop(0)
     
     order_amount_counts = []
@@ -264,21 +258,21 @@ def howmuch_to_order(current_stocks_data_column):
         order_amount_counts.append(order_amount)
     return order_amount_counts
 
-def print_order_list_wines():
+def print_order_list():
     """
     Printing out the list of products and relevantly their information that indicates how much the user needs to order 
-    (wines) - option 4
+    option 4
     """
     print("Collecting order list and details...\n")
 
-    wine_order = wines.get_all_values()
+    product_order = stock_sheet.get_all_values()
 
-    for item in range(len(wine_order)):
-        print(wine_order[item])
+    for item in range(len(product_order)):
+        print(product_order[item])
 
-    x = wine_order[item]
+    x = product_order[item]
 
-def get_the_order_list_wines():
+def get_the_order_list():
     """
     Run all program functions for option 4
     """
@@ -288,7 +282,7 @@ def get_the_order_list_wines():
     show_date()  #show current date when update the stock levels
     new_order_amount_counts = howmuch_to_order(current_stocks_data)
     update_order_list_sheet(new_order_amount_counts)
-    print_order_list_wines()
+    print_order_list()
 
 #https://computinglearner.com/how-to-create-a-menu-for-a-python-console-application/?utm_content=cmp-true
  
@@ -320,13 +314,13 @@ if __name__=='__main__':
             print('Wrong input. Please enter a number ...')
         #Check what choice was entered and act accordingly
         if option == 1:
-           get_wine_product_list()
+           get_all_product_list()
         elif option == 2:
             option2()
         elif option == 3:
             option3()
         elif option == 4:
-            get_the_order_list_wines()
+            get_the_order_list()
         elif option == 5:
             print('Thank You, Goodbye!')
             exit()
