@@ -39,7 +39,8 @@ def get_new_product():
     while True:
 
         print("Please enter the details of the new product.")
-        print("Data should contain 4 details, separated by commas: Name,Unit,Price,Par level")
+        print("Data should contain 4 details, separated by commas: "
+              "Name,Unit,Price,Par level")
         print("Examlpe: Campari,Bottle,£14.26,18\n")
 
         data_str = input("Enter the new product details here:\n")
@@ -64,7 +65,8 @@ def validate_data_add_product(values):
     try:
         if len(values) != 4:
             # check the number of details matches the number required
-            raise ValueError(f"Exactly 4 details required, you provided {len(values)}.")
+            raise ValueError(f"Exactly 4 details required, you"
+                             f"provided{len(values)}.")
 
         if not isinstance(int(values[3]), int):
             # validate the par level (integer)
@@ -126,7 +128,8 @@ def validate_data_delete_product(values):
     try:
         if len(values) < 2:
             # check the number of details matches the number required
-            raise ValueError(f"Exactly 1 product name required, you provided {len(values)} details.")
+            raise ValueError(f"Exactly 1 product name required, you"
+                             f"provided {len(values)} details.")
 
     except ValueError as e:
         print(f"Invalid data: {e}, please try again.\n")
@@ -180,7 +183,8 @@ def get_current_stocks_data():
     while True:
 
         print("Please enter current stock data.")
-        print(f"Data should be {get_list_of_products()} numbers, separated by commas.")
+        print(f"Data should be {get_list_of_products()} numbers, separated"
+              f"by commas.")
         print("Examlpe: 8,12,0.8,3.6,18,22,etc\n")
 
         data_str = input("Enter your numbers here:\n")
@@ -207,7 +211,9 @@ def validate_data(values):
 
         if len(values) != get_list_of_products():
             raise ValueError(
-                f"Exactly {get_list_of_products()} numbers required, you provided {len(values)}. If an item has run out completely, put 0")
+                f"Exactly {get_list_of_products()} numbers required, you"
+                f"provided {len(values)}. If an item has run out completely,"
+                f"put 0")
     except ValueError as e:
         print(f"Invalid data: {e}, please try again.\n")
         return False
@@ -300,7 +306,8 @@ def get_the_order_list():
     Run all program functions for option 4
     """
     data = get_current_stocks_data()
-    current_stocks_data = [int(num) if num.isdigit() else float(num)for num in data]
+    current_stocks_data = (
+        [int(num) if num.isdigit() else float(num)for num in data])
     update_stocks_countsheet(current_stocks_data)
     show_date()  # show current date when update the stock levels
     new_order_amount_counts = howmuch_to_order(current_stocks_data)
@@ -325,7 +332,8 @@ def print_menu():
     the user decides to go back to the main menu.
     """
     print('\nMenu - OrderEasy Application:\n')
-    print('Please select what you would like to do by entering a number between 1 and 5\n')
+    print('Please select what you would like to do by entering a number '
+          'between 1 and 5\n')
 
     for key in menu_options.keys():
         print(key, '--', menu_options[key])
@@ -337,7 +345,7 @@ if __name__ == '__main__':
         option = ''
         try:
             option = int(input('\nEnter your number here:\n'))
-        except:
+        except ValueError:
             print('Wrong input. Please enter a number ...')
         # Check what choice was entered and act accordingly
         if option == 1:
