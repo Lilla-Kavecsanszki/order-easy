@@ -96,15 +96,33 @@ This website:
 
 [Back to top](https://github.com/Lilla-Kavecsanszki/order-easy#contents)
 
-# Wireframes - Chart
+# Flow Charts
 
-Home page
+<p>
+<details><summary>Home page - Menu</summary><br/>
+<img src="readme-images/flowchart-menu.jpg" alt="menu flow chart">
+</details>
 
-![Home page wireframe](readme-images/wireframe-homepage.png "Home page wireframe")
+<p>
+<details><summary>Option1 - Print Product List</summary><br/>
+<img src="readme-images/option1-flow.jpg" alt="Print Product List flow chart">
+</details>
 
-...page
+<p>
+<details><summary>Option2 - Add New Product</summary><br/>
+<img src="readme-images/option2-flow.jpg" alt="Add New Product flow chart">
+</details>
 
-![How to play? page wireframe](readme-images/wireframe-howtoplaypage.png "How to play? page wireframe")
+<p>
+<details><summary>Option3 - Delete Product</summary><br/>
+<img src="readme-images/option3-flow.jpg" alt="Delete Product flow chart">
+</details>
+
+<p>
+<details><summary>Option4 - Get the Order List</summary><br/>
+<img src="readme-images/option4-flow.jpg" alt="Get the Order List flow chart">
+</details>
+<br>
 
 [Back to top](https://github.com/Lilla-Kavecsanszki/order-easy#contents)
 
@@ -117,7 +135,7 @@ Python was used to complete this project.
 
 # Frameworks, Libraries, Programs & Technologies Used
 
-- Microsoft Word was used to create the flow chart
+- [Miro](https://miro.com/) was used to create the flow charts
 - Github was used as the respository for the projects code after being pushed from Git
 - Git was used for version control by the Gitpod terminal to commit to Git and Push to GitHub; to create and edit all 
   original code
@@ -250,27 +268,9 @@ Locate the main page of friends-quiz repository. Click the fork button in the to
 
 # Testing
 
-W3C CSS Validator result on the css page
+Python Validator result on the run.py file
 
-![CSS Validator](readme-images/css-validator.png "CSS Validator")
-
-W3C HTML Validator result on the Home page
-
-![HTML Validator Home page](readme-images/html-validator-home-page.png "HTML Validator Home page")
-
-W3C HTML Validator result on the How to play page
-
-![HTML Validator How to play page](readme-images/html-validator-how-to-play-page.png "HTML Validator How to play page")
-
-JS Validator results on the script.js file
-
-![JS Validator script](readme-images/jsvalidator-script.png "JS Validator script")
-
-JS Validator results on the data.js file
-
-![JS Validator data](readme-images/jsvalidator-data.png "JS Validator data")
-
-[Back to top](https://github.com/Lilla-Kavecsanszki/order-easy#contents)
+![Python Validator](readme-images/python_validator.png "Python Validator")
 
 ## Manual Testing
 
@@ -388,6 +388,9 @@ https://docs.gspread.org/en/v5.3.0/api.html
 
 Print into table format - order results
 https://www.geeksforgeeks.org/how-to-make-a-table-in-python/
+
+How to edit a dropdown link in the README
+https://chrisfrew.in/blog/dropdowns-in-readmes/
 
 .
 .
