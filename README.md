@@ -1,25 +1,29 @@
 # OrderEasy Application
 
-This website is for all users who are working in any environment that works with stocks and its management, namely the ordering part. The app's purpose to make this process much easier and faster for the user.  
+This application is designed to cater to the needs of all users who work in any environment that involves stocks and their management, especially the ordering part. The primary objective of the app is to simplify and speed up the process of managing stocks for its users. 
+The main focus is to be straight forward enough to save time for the user, yet to be engaging and motivating at the same time.
 
-The site's main focus is to be straight forward enough to save time for the user, yet to be engaging, motivating at the same time.
+The user can interact with the application in various ways such as viewing the current list of products, adding or removing products with relevant details from the stock list. The app also assists the user in determining how much of each product needs to be ordered based on their input of current stock holding information, which is compared to par levels by the application.
 
-[Link to my app](https://order-easy-python-milestone.herokuapp.com/)
+Furthermore, the app stores all stock information and data in an external Google Spreadsheet for easy access and management.
+
+[Link to the live project](https://order-easy-python-milestone.herokuapp.com/)
 
 
 The business goals of this website are:
-  -	Provide high-quality 
-  -	Excellent UX to keep potential clients 
-  .
-  .
-  .
+  -	To deliver a high-quality application that addresses all stock management issues efficiently
+  -	To provide an excellent user experience that is both efficient for each client and easy to use
+  - To simplify the management of the product list, thanks to the use of Google Spreadsheet and the update options 
+    on the app
+  - To always provide accurate results with the current date noted
 
 The customer goals of this website are:
-  -	Search for an aplication
-  -	A website where they can find 
-  .
-  .
-  .
+  -	To search for an application that is user-friendly and easy to navigate
+  -	To have a website where they can easily add, remove, and change their product list to adapt to current trends and needs
+  - to reduce the amount of time users have to spend away from their customers while managing their stocks 
+    and placing orders for new items
+  - To make stock management and ordering simpler and easier to train new employees, ultimately reducing stress and 
+    improving overall efficiency
 
 
 # Contents
@@ -72,11 +76,11 @@ This website is the best way to help them achieve these goals because:
 .
 
 This website:
--	Is easy to navigate by the menus...
+-	Is easy to navigate by the menu
 -	Gives the customers options and access to useful and learnable information.
--	Gives the customers the information they need without overloading them or distracting them from their original ideas or wishes.
+-	Gives the customers the information they need without overloading them or distracting them from their original ideas or 
+  wishes.
 -	Guides them by their curiosity about the goal of the website.
--	...
 
 
 [Back to top](https://github.com/Lilla-Kavecsanszki/order-easy#contents)
@@ -104,20 +108,6 @@ Home page
 
 [Back to top](https://github.com/Lilla-Kavecsanszki/order-easy#contents)
 
-# Accessibility
-
-
-Accessibility has been a very important point for me while designing the website.
-
-Lighthouse testing for desktop and mobile has scored 100% for accessibility on both.
-
-![Lighthouse Accessibility](readme-images/accessibility-lighthouse-test.png "Lighthouse Accessibility")
-
-I used [A11y](https://color.a11y.com) the Color Contrast Accessibility Validator which determined that no colour contrast issues were found on any of the pages.
-
-![A11y Test](readme-images/a11y-test.png "A11y Test")
-
-[Back to top](https://github.com/Lilla-Kavecsanszki/order-easy#contents)
 
 # Languages Used
 
@@ -125,13 +115,20 @@ Python was used to complete this project.
 
 [Back to top](https://github.com/Lilla-Kavecsanszki/order-easy#contents)
 
-# Technologies Used
+# Frameworks, Libraries, Programs & Technologies Used
 
 - Microsoft Word was used to create the flow chart
-- Github was used to store all files for this website
-- Gitpod was used to create and edit all original code
-- Google Chrome Developer Tools was used for debugging and testing with Lighthouse
-- Heroku...
+- Github was used as the respository for the projects code after being pushed from Git
+- Git was used for version control by the Gitpod terminal to commit to Git and Push to GitHub; to create and edit all 
+  original code
+- Google Spreadsheets was used as the external data store for stock data used by the project
+- Google Drive API was used to generate credentials used in the project to securely access the Google Spreadsheet
+- Google Sheets API was used to support interactions (e.g. read/write functionality) between the code and data stored in 
+  the Google Spreadsheet
+- gspread is the Python API for Google Sheets
+- Google Auth is the Google authentication library for Python required to use the credentials generated for Google Drive 
+  API
+- Heroku was used to deploy the application and provides an enviroment in which the code can execute
 
 [Back to top](https://github.com/Lilla-Kavecsanszki/order-easy#contents)
 
@@ -219,15 +216,21 @@ Under the instructions section, there is ...
 
 # Deployment
 
-The Friends Quiz website is deployed using Github Pages, this was done by:
+The OrderEasy website is deployed using Heroku, this was done by:
 
-1. Login to Github
-2.	Navigate to the account Lilla-Kavecsanszki, and locate the friends-quiz repository
-3.	In the friends-quiz repository click on the Settings tab
-4.	In the Code and Automation subheading in the sidebar click on Pages
-5.	Under Build and Deployment find the Source section, set the source to deploy from a branch and set this branch to
-    main, and the folder option to /root
-6.	Click save, wait a few minutes and the Friends quiz website is now deployed at the URL displayed
+1. Add dependencies in GitPod to requirements.txt file with command "pip3 freeze > requirements.txt"
+2. Commit and push to GitHub
+3. Go to the Heroku Dashboard
+4. Click "Create new app"
+5. Name app and select location
+6. Choose the Settings tab and add Config Vars for Creds and Port (creds.json file)
+   (as a second entry also add PORT for the key and 8000 for the value)
+7. Add the buildbacks to Python and NodeJS in that order
+8. Now go to Deploy tab
+9. Select GitHub as deployment method
+10. Connect to GitHub and link to repository
+11. Enable automatic deployment or deploy manually
+12. Click on Deploy
 
 [Back to top](https://github.com/Lilla-Kavecsanszki/order-easy#contents)
 
@@ -336,9 +339,7 @@ I asked friends and family to look at the site on their devices and browsers and
 A few issues came up while testing the website in the meantime; 
 
 1. The encouraging message didn't work properly at some stage. This was an easy fix, as I realised that I was getting the wrong id from the html file, so after this was linked to the correct element.
-2. The question counter was going over the number 10, instead of stopping at it and therefore didn't end the quiz properly. When I wanted to start a new round, the game went back to the end of the previous game. I resolved this issue by zeroing down the questionCounter at the end of the game, so it wouldn't overroll anymore. And a new quiz can start each time, also from question 1 again.
-3. The questions also didn't restart if I wanted to play a new game with the same character as I previously did. This was resolved by the spread operator (...character.questions). Without this the code was pointing to the questions in the original array and later on with using splice method that was deleting the questions from the original array, therefore we had no questions left. So to restart the game for the same character, the spread operator creates a copy of the original array. 
-4. While testing the quiz on mobile-sized screens, The let's start button, audio buttons and the Rachel button didn't work. This issue was resolved by adjusting the height of the logo-image (in media queries) as that was covering the mentioned buttons before. 
+
 
 [Back to top](https://github.com/Lilla-Kavecsanszki/order-easy#contents)
 
@@ -347,7 +348,9 @@ A few issues came up while testing the website in the meantime;
 
 ## Content
 
-The text for the 'How to Play?' page and the content for the quiz games were a creative work of Georgina Kavecsanszki. 
+The Google spreadsheet (order_spreadsheet) that the application uses has the following fictitious initial data which was set up manually by the author:
+
+Stocks Sheet
 
 
 [Back to top](https://github.com/Lilla-Kavecsanszki/order-easy#contents)
@@ -356,7 +359,7 @@ The text for the 'How to Play?' page and the content for the quiz games were a c
 
 ## Acknowledgments and Code
 
-I received inspiration for this project from my current job as well as from my partner's struggle regarding the issue at his job. I have also checked out works of other students for scope and what's best practice for a Milestone project 3. 
+I received inspiration for this project from my personal experience working in the hosptality industry, as well as from my partner's struggles with similar issues at his job. In addition, I reviewed the work of other students to gain a better understanding of project scope and to identify best practices for Milestone Project 3.
 
  https://stackoverflow.com/questions/74665788/how-to-convert-string-to-number-in-python
  how to convert data into integers and floats 
