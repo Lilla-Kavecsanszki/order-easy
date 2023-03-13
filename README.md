@@ -31,10 +31,9 @@ The customer goals of this website are:
 - [User Experience (UX)](https://github.com/Lilla-Kavecsanszki/order-easy#user-experience-ux)
 - [Ideal client](https://github.com/Lilla-Kavecsanszki/order-easy#ideal-client)
 - [User stories](https://github.com/Lilla-Kavecsanszki/order-easy#user-stories)
-- [Wireframes](https://github.com/Lilla-Kavecsanszki/order-easy#wireframes---chart)
-- [Accessibility](https://github.com/Lilla-Kavecsanszki/order-easy#accessibility)
+- [Flow Charts](https://github.com/Lilla-Kavecsanszki/order-easy#flow-charts)
 - [Languages Used](https://github.com/Lilla-Kavecsanszki/order-easy#languages-used)
-- [Technologies Used](https://github.com/Lilla-Kavecsanszki/order-easy#technologies-used)
+- [Frameworks, Libraries, Programs & Technologies Used](https://github.com/Lilla-Kavecsanszki/order-easy#frameworks-libraries-programs--technologies-used)
 - [Features](https://github.com/Lilla-Kavecsanszki/order-easy#features)
   - [Home](https://github.com/Lilla-Kavecsanszki/friends-quiz#home)
   - [How to Play?](https://github.com/Lilla-Kavecsanszki/friends-quiz#how-to-play)
@@ -69,11 +68,7 @@ Visitors of this app search for:
 
 This website is the best way to help them achieve these goals because:
 -	Most other similar sites are limited in 
- 
--	The website also offers 
-.
-.
-.
+
 
 This website:
 -	Is easy to navigate by the menu
