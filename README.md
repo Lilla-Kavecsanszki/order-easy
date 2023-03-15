@@ -181,18 +181,29 @@ In the event that the user inputs do not satisfy the validation criteria, they w
 
 The rules for the input values:
 
-- inputs are separated by commas
+- Inputs are separated by commas
 - 4 values are required
-Date should have a format of DD-MM-YYYY and must be >= current date
-The Capacity value must be an integer > 0
+- The 4th value, the par level, needs to be an integer so that the program can use it for calculations later on
 
 ![Invalid input for option2](readme-images/how-to-play.png "Invalid input for option2")
 
+![Invalid literal input for option2](readme-images/how-to-play.png "Invalid literal input for option2")
+
+When the user inputs valid data the application displays multiple messages to assure the user with information on how the data is being processed and a new row is added to the stocks spreadsheet for the new product. Once the operation is complete it returns to the menu.
+
+![Valid input for option2](readme-images/how-to-play.png "Valid input for option2")
+
+The updated Google Spreadsheet:
+
+![Updated Spreadsheet for option2](readme-images/how-to-play.png "Updated Spreadsheet for option2")
+
 #### Option 3 - Delete Product
 
-On the top, the ...
+The user can remove, delete an already existing product by choosing option 3 from the menu. The application displays a message on screen explaining the input requirement and also an example input string of value for better understanding.
 
 ![Option3](readme-images/how-to-play.png "Option3")
+
+
 
 #### Option 4 - Get the Order List
 

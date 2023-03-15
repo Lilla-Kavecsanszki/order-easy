@@ -113,12 +113,15 @@ def get_deleted_product():
 
         deleting_product = input("Enter the name of the product here:\n")
 
-        if validate_data_delete_product(deleting_product):
+        deleted_product = deleting_product.split(",")
+        print(deleted_product)
+
+        if validate_data_delete_product(deleted_product):
             print("Data for deleted product is valid")
             break
 
-    return deleting_product
-
+    return deleted_product
+    
 
 def validate_data_delete_product(values):
     '''
@@ -127,7 +130,7 @@ def validate_data_delete_product(values):
     print('Validating input details...\n')
 
     try:
-        if len(values) < 2:
+        if len(values) != 1:
             # check the number of details matches the number required
             raise ValueError(f"Exactly 1 product name required, you"
                              f" provided {len(values)} details.")
