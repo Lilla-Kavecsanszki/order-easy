@@ -36,9 +36,6 @@ The customer goals of this website are:
 - [Frameworks, Libraries, Programs & Technologies Used](https://github.com/Lilla-Kavecsanszki/order-easy#frameworks-libraries-programs--technologies-used)
 - [Features](https://github.com/Lilla-Kavecsanszki/order-easy#features)
 - [Deployment](https://github.com/Lilla-Kavecsanszki/order-easy#deployment)
-- [Local Deployment](https://github.com/Lilla-Kavecsanszki/order-easy#local-deployment)
-  - [How to Clone](https://github.com/Lilla-Kavecsanszki/order-easy#how-to-clone)
-  - [How to Fork](https://github.com/Lilla-Kavecsanszki/order-easy#how-to-fork)
 - [Testing](https://github.com/Lilla-Kavecsanszki/order-easy#testing)
   - [Manual Testing](https://github.com/Lilla-Kavecsanszki/order-easy#manual-testing)
   - [User Stories Testing](https://github.com/Lilla-Kavecsanszki/order-easy#user-stories-testing)
@@ -58,7 +55,7 @@ The ideal client for this business is:
 
 -	English speaking
 -	Works with any types of stock
--	Need to order stocks
+-	Needs to order stocks
 -	Individuals, or companies
 
 Visitors of this app search for:
@@ -268,6 +265,78 @@ The user can exit and terminate the application by choosing option 5 from the me
 
 # Deployment
 
+## How to Clone
+<p>
+<details><summary>Steps</summary><br/>
+
+1. Go to the https://github.com/Lilla-Kavecsanszki/order-easy repository 
+2. Click the Code button to the left of the green Gitpod button, then choose Local. 
+3. Click on headings for HTTPS, SSH, and Github CLI to find their individual URL links. Choose the HTTPs one. 
+4. Open your own terminal in your editor and change the current working directory to the location of where you want the 
+   cloned directory to be. 
+5. In the terminal type git clone, and then paste the URL you copied from the repository page. 
+6. Press enter to complete.
+</details>
+<br>
+
+## How to create and configure the Google spreadsheet and APIs
+<p>
+<details><summary>Steps</summary><br/>
+
+1. Log in (or create) to your Google account
+2. Create a Google Spreadsheet (order_spreadsheet) on Google Drive. Mine has 1 page; 'stocks'.
+3. In row 1 of the stocks sheet, create the headings: Products, Unit, Price, Par level, Current Stock Holding, How much to 
+   order
+4. Then go ahead and fill out the sheet as needed. For the initial sample data used in this project click [here](https://.github.com/Lilla-Kavecsanszki/order-easy#content)
+5. Set up APIs on the [Google Cloud Platform](https://console.cloud.google.com/welcome?project=ordereasy-378810)
+6. Create a new project, so click on the “Select a project” button and then select “new project”. and 
+7. Give it a unique name, then by clicking on “Select Project” again, go to dashboard
+8. Setup Google Drive credentials
+9. From the side menu (hamburger menu on the top) select "APIs and Services" and then "Library"
+10. Search for Google Drive API
+11. Select Google Drive API and click on the 'enable' button, which will take you to the API overview page.
+12. Click the “Create credentials” button, then there is a form the fill out.
+13. From the "Which API are you using?" dropdown menu, choose Google Drive API
+14. For the "What data will you be accessing?" question, select Application Data
+15. For the "Are you planning to use this API with Compute Engine, Kubernetes Engine, App Engine, or Cloud Functions?"     question, select No, I'm not using them
+16. Click Next
+17. Enter a Service Account name, then click Create
+18. In the Role Dropdown box choose Basic > Editor then press Continue
+19. You got taken to the next page, where those options can be left blank, click Done
+20. On the next page, click on the Service Account that has been created
+21. On the next page, click on the Keys tab
+22. Click on the Add Key dropdown and select Create New Key
+23. Select JSON and then click Create, which will trigger your credentials file to be downloaded  
+    into our computer files
+24. You also need to enable your Google Sheets API. So go back to the library again, and search for “google sheets”.  
+25. Select the Google Sheets API, then click “enable” (there's no need for more credentials here)
+Now you have your APIs enabled, and have your credentials file downloaded.  
+26. Add your credentials file that you downloaded in step 23; so locate the json file wherever it is within your computer 
+    files and simply drag and drop it into your Gitpod workspace.
+27. Rename it to "creds.json" to make it easier to use
+28. Open up the json file and find the client_email value here, copy this email address generated for your credentials. 
+    Copy it without the quotes around it.
+29. Go back to your spreadsheet and click the share button here
+30. Paste in the client email, make sure “Editor” is selected, untick “Notify People”, and then click "share"
+31. Make sure that gitignore file contains your creds.json file, then save and commit
+32. Install gspread and google-auth libraries in the development environment using the 
+    command 'pip3 install gspread google-auth'
+</details>
+<br>
+
+## How to Fork
+<p>
+<details><summary>Steps</summary><br/>
+
+1. Go to the https://github.com/Lilla-Kavecsanszki/order-easy repository 
+2. Click the fork button in the top right of the screen, between the watch, and the star buttons.
+</details>
+<br>
+
+## Deployment to Heroku
+<p>
+<details><summary>Steps</summary><br/>
+
 The OrderEasy website is deployed using Heroku, this was done by:
 
 1. Add dependencies in GitPod to requirements.txt file with command "pip3 freeze > requirements.txt"
@@ -283,49 +352,18 @@ The OrderEasy website is deployed using Heroku, this was done by:
 10. Connect to GitHub and link to repository
 11. Enable automatic deployment or deploy manually
 12. Click on Deploy
-
-[Back to top](https://github.com/Lilla-Kavecsanszki/order-easy#contents)
-
-# Local Deployment
-
-## How to Clone
-
-1. Go to the https://github.com/Lilla-Kavecsanszki/order-easy repository 
-2. Click the Code button to the left of the green Gitpod button, then choose Local. 
-3. Click on headings for HTTPS, SSH, and Github CLI to find their individual URL links. Choose the HTTPs one. 
-4. Open your own terminal in your editor and change the current working directory to the location of where you want the 
-   cloned directory to be. 
-5. In the terminal type git clone, and then paste the URL you copied from the repository page. 
-6. Press enter to complete.
-
-[Back to top](https://github.com/Lilla-Kavecsanszki/order-easy#contents)
-
-## How to create and configure the Google spreadsheet and APIs
-
-1. Log in (or create) to your Google account
-2. Create a Google Spreadsheet (order_spreadsheet) on Google Drive. Mine has 1 page; 'stocks'.
-3. In row 1 of the stocks sheet, create the headings: Products, Unit, Price, Par level, Current Stock Holding, How much to 
-   order
-4. Then go ahead and fill out the sheet as needed.
-
-For the initial sample data used in this project click [here](https://github.com/Lilla-Kavecsanszki/order-easy#content)
-
-5. Set up APIs on the [Google Cloud Platform](https://console.cloud.google.com/welcome?project=ordereasy-378810)
-6. Create a new project and give it a unique(!) name, then go to dashboard
-7. Setup Google Drive credentials
-
-## How to Fork
-
-1. Go to the https://github.com/Lilla-Kavecsanszki/order-easy repository 
-2. Click the fork button in the top right of the screen, between the watch, and the star buttons.
+</details>
+<br>
 
 [Back to top](https://github.com/Lilla-Kavecsanszki/order-easy#contents)
 
 # Testing
 
-Python Validator result on the run.py file
-
-![Python Validator](readme-images/python_validator.png "Python Validator")
+<p>
+<details><summary>Python Validator result on the run.py file</summary><br/>
+<img src="readme-images/python_validator.png" alt="Python Validator">
+</details>
+<br>
 
 ## Manual Testing
 

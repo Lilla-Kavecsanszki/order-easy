@@ -186,8 +186,8 @@ def get_current_stocks_data():
     while True:
 
         print("Please enter current stock data.")
-        print(f"Data should be {get_list_of_products()} numbers, integers or floats, separated"
-              f" by commas.")
+        print(f"Data should be {get_list_of_products()} numbers, integers "
+              f"or floats, separated by commas.")
         print("Examlpe: 8,12,0.8,3.6,18,22,etc\n")
 
         data_str = input("Enter your numbers here:\n")
