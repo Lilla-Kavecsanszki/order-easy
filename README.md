@@ -64,30 +64,34 @@ The ideal client for this business is:
 -	Individuals, or companies
 
 Visitors of this app search for:
--	A knowledgeable app...
+-	A knowledgeable app that is easy to use
+- That helps reducing the user's time spending on this specific task
+- That is relyable and accurate
 
-This website is the best way to help them achieve these goals because:
--	Most other similar sites are limited in 
+This application is the best way to help them achieve these goals because:
+-	The menu makes the access of different commands very easy to execute
+- The menu keeps coming back on display until the user chooses to exit the app
+- The program will display all relevant information that can be necessary to order the products; with their name, unit types, prices, how much the user currently has on stock, the ideal par level and therefore how much needs to be ordered. 
+- The product list can be easily updated with a new product and/or deleting one. 
 
-
-This website:
+This application:
 -	Is easy to navigate by the menu
 -	Gives the customers options and access to useful and learnable information.
 -	Gives the customers the information they need without overloading them or distracting them from their original ideas or 
   wishes.
 -	Guides them by their curiosity about the goal of the website.
 
-
 [Back to top](https://github.com/Lilla-Kavecsanszki/order-easy#contents)
 
 ### User stories
 
-1.	As a viewer of the website, I want to easily navigate the site, so I can find what I need, 
-2.	As a potential new visitor to the website, I want to understand what my options are
-3.	As a viewer of the website, I want to be able to see the results and the date when the data was entered, and requested 
-4.	As an interested observer and/or hiring manager, I want to be able to find the web developer and see other projects 
-    from her on social media and industry-relevant sites.
-
+1.	As a user of the application, I want to easily navigate the app, so I can find what I need quickly
+2.	As a potential new user to the application, I want to understand what my options are
+3.	As a user of the application, I want to be able to retrieve the list of products that I have on stocks to make the stock count, and therefore the later input faster, more efficient.
+4.	As a user of the application, I want to be able to add a new product to the stock list, in case my business needs a new, different product with time
+5.	As a user of the application, I want to be able to remove, delete an existing product from the stock list, in case my business doesn't need that specific product anymore
+6. As a user of the application, I want to be able to see the results, as in how much I need to order and the date when the data was entered, and requested too
+7. As a user of the application, I want to be able to see the relevant information of each product when I am ready to order them for better consideration, including their price, units as well. 
 
 [Back to top](https://github.com/Lilla-Kavecsanszki/order-easy#contents)
 
@@ -147,85 +151,60 @@ Python was used to complete this project.
 
 # Features
 
-The Order Easy application includes 
-.
-.
-.
- 
+#### Home - The Menu
 
-![Hamburger Menu](readme-images/hamburger-bar.png "Hamburger Menu")
+The menu is displayed when the application starts to keep the interface simple to use and uncluttered. The menu features five options, functionalities for the user to choose from; 1) Print Product List, 2) Add New Product, 3) Delete Product, 4) Get the Order List and 5) Exit.
 
+![f_menu](readme-images/top-part.png "f_menu")
 
-![Footer](readme-images/footer.png "Footer")
+The user is prompted to choose one of the menu options by entering the option number. In the event of an invalid input, an error message will be displayed and the main menu will be displayed again.
 
-#### Home
+![Error to menu options](readme-images/audio-part.png "Error to menu options")
 
-The Home page features a 
-.
-.
+The menu will continue to be displayed repeatedly until the user inputs a valid response and after the completion of each options (1-4). The application will be terminated only when the user selects option 5 from the menu.
 
-![Logo](readme-images/top-part.png "Logo")
+#### Option 1 - Print Product List
 
-After the 
-.
-.
-.
+If the user selects option 1 from the menu they are shown the list of the products that are currently on the stocks sheet in the Google Spreadheet.
 
-![Navigation and audio buttons](readme-images/audio-part.png "Navigation and audio buttons")
+This is data taken from the Google Spreadheet, all information listed under each other from its first column. Products added or deleted while using the application will be reflected on the list when the 'Print Product List' option is subsequently run.
 
-After this section, there are ...
+![Option1](readme-images/how-to-play.png "Option1")
 
-![Character choosing buttons](readme-images/character-buttons.png "Character choosing buttons")
+#### Option 2 - Add New Product
 
-After clicking on the buttons, .
-.
-.
-![Quiz window](readme-images/quiz-window.png "Quiz window")
+The user can add a new product by choosing option 2 from the menu. The application displays a message on screen listing the input requirements and also an example input string of values for better understanding.
 
-This ...also features a ...
+![Option2](readme-images/how-to-play.png "Option2")
 
-![Progress bar](readme-images/progressbar.png "Progress bar")
+In the event that the user inputs do not satisfy the validation criteria, they will be prompted to re-enter the required information. The explanation of the data needed is displayed again too. 
 
-On the same line ....
+The rules for the input values:
 
-![Score display](readme-images/score-display.png "Score display")
+- inputs are separated by commas
+- 4 values are required
+Date should have a format of DD-MM-YYYY and must be >= current date
+The Capacity value must be an integer > 0
 
-Under the ...
+![Invalid input for option2](readme-images/how-to-play.png "Invalid input for option2")
 
-![Quiz](readme-images/quiz.png "Quiz")
+#### Option 3 - Delete Product
 
-When the user finishes with all ....
+On the top, the ...
 
-![Final result window](readme-images/final-results-window.png "Final result window")
+![Option3](readme-images/how-to-play.png "Option3")
 
-First, ...
-
-![Final result](readme-images/final-result.png "Final result")
-
-Then a ...
-
-![Feedback](readme-images/message.png "Feedback")
-
-And lastly, ...
-
-![Home button](readme-images/home-button.png "Home button")
-
-#### How to Play? 
+#### Option 4 - Get the Order List
 
 On the top, the ...
 
 ![Title](readme-images/how-to-play.png "Title")
 
-Underneath there is an ....
+#### Option 5 - Exit
 
-![Instructions](readme-images/instructions.png "Instructions")
+On the top, the ...
 
-Under the instructions section, there is ...
-
-![Turkey](readme-images/turkey.png "Turkey")
-
-
-[Back to top](https://github.com/Lilla-Kavecsanszki/order-easy#contents)
+![Title](readme-images/how-to-play.png "Title")
 
 # Deployment
 

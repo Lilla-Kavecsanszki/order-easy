@@ -67,7 +67,7 @@ def validate_data_add_product(values):
         if len(values) != 4:
             # check the number of details matches the number required
             raise ValueError(f"Exactly 4 details required, you"
-                             f"provided{len(values)}.")
+                             f" provided {len(values)}.")
 
         if not isinstance(int(values[3]), int):
             # validate the par level (integer)
@@ -130,7 +130,7 @@ def validate_data_delete_product(values):
         if len(values) < 2:
             # check the number of details matches the number required
             raise ValueError(f"Exactly 1 product name required, you"
-                             f"provided {len(values)} details.")
+                             f" provided {len(values)} details.")
 
     except ValueError as e:
         print(f"Invalid data: {e}, please try again.\n")
@@ -185,7 +185,7 @@ def get_current_stocks_data():
 
         print("Please enter current stock data.")
         print(f"Data should be {get_list_of_products()} numbers, separated"
-              f"by commas.")
+              f" by commas.")
         print("Examlpe: 8,12,0.8,3.6,18,22,etc\n")
 
         data_str = input("Enter your numbers here:\n")
@@ -213,8 +213,8 @@ def validate_data(values):
         if len(values) != get_list_of_products():
             raise ValueError(
                 f"Exactly {get_list_of_products()} numbers required, you"
-                f"provided {len(values)}. If an item has run out completely,"
-                f"put 0")
+                f" provided {len(values)}. If an item has run out completely,"
+                f" put 0")
     except ValueError as e:
         print(f"Invalid data: {e}, please try again.\n")
         return False
