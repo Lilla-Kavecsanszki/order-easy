@@ -35,8 +35,6 @@ The customer goals of this website are:
 - [Languages Used](https://github.com/Lilla-Kavecsanszki/order-easy#languages-used)
 - [Frameworks, Libraries, Programs & Technologies Used](https://github.com/Lilla-Kavecsanszki/order-easy#frameworks-libraries-programs--technologies-used)
 - [Features](https://github.com/Lilla-Kavecsanszki/order-easy#features)
-  - [Home](https://github.com/Lilla-Kavecsanszki/friends-quiz#home)
-  - [How to Play?](https://github.com/Lilla-Kavecsanszki/friends-quiz#how-to-play)
 - [Deployment](https://github.com/Lilla-Kavecsanszki/order-easy#deployment)
 - [Local Deployment](https://github.com/Lilla-Kavecsanszki/order-easy#local-deployment)
   - [How to Clone](https://github.com/Lilla-Kavecsanszki/order-easy#how-to-clone)
@@ -157,9 +155,9 @@ The menu is displayed when the application starts to keep the interface simple t
 
 ![f_menu](readme-images/f_menu.png "f_menu")
 
-The user is prompted to choose one of the menu options by entering the option number. In the event of an invalid input, an error message will be displayed and the main menu will be displayed again.
+The user is prompted to choose one of the menu options by entering the option number. In the event of an invalid input, an error message will be displayed and the main menu will be displayed again. 
 
-![Error to menu options](readme-images/invalid_menu_input.png "Error to menu options")
+![invalid input menu](readme-images/invalid_menu_input.png "invalid input menu")
 
 The menu will continue to be displayed repeatedly until the user inputs a valid response and after the completion of each options (1-4). The application will be terminated only when the user selects option 5 from the menu.
 
@@ -265,6 +263,8 @@ Once the operation is complete it returns to the menu.
 The user can exit and terminate the application by choosing option 5 from the menu. As a final touch, the program displays a Goodbye message to the user.
 
 ![exit](readme-images/exit.png "exit")
+
+[Back to top](https://github.com/Lilla-Kavecsanszki/order-easy#contents)
 
 # Deployment
 
@@ -393,42 +393,48 @@ Stocks Sheet
 
 ## Acknowledgments and Code
 
-I received inspiration for this project from my personal experience working in the hosptality industry, as well as from my partner's struggles with similar issues at his job. In addition, I reviewed the work of other students to gain a better understanding of project scope and to identify best practices for Milestone Project 3.
+I received inspiration for this project from my personal experience working in the hosptality industry, as well as from my partner's struggles with similar issues at his job. These experiences made me figure the logic for this project grately. In addition, I reviewed the work of other students to gain a better understanding of project scope and to identify best practices for Milestone Project 3.
 
- https://stackoverflow.com/questions/74665788/how-to-convert-string-to-number-in-python
- how to convert data into integers and floats 
+The below websites have been used to understand the logic of building this project with Python.
 
- https://docs.gspread.org/en/latest/user-guide.html#updating-cells
- How to update cells and work the spreadsheet
- https://docs.gspread.org/en/latest/user-guide.html#getting-all-values-from-a-row-or-a-column
- https://stackoverflow.com/questions/14625617/
+How to convert data into integers and floats
 
- https://stackoverflow.com/questions/30989213/can-i-control-the-output-of-insert-row-in-gspread
+https://stackoverflow.com/questions/74665788/how-to-convert-string-to-number-in-python
+  
+How to update cells and work the spreadsheet
 
- checking data types
- https://stackoverflow.com/questions/1549801/what-are-the-differences-between-type-and-isinstance
- https://stackoverflow.com/questions/1549801/what-are-the-differences-between-type-and-isinstance
+https://docs.gspread.org/en/latest/user-guide.html#updating-cells
+https://docs.gspread.org/en/latest/user-guide.html#getting-all-values-from-a-row-or-a-column
+https://stackoverflow.com/questions/14625617/
+https://stackoverflow.com/questions/30989213/can-i-control-the-output-of-insert-row-in-gspread
 
- https://www.askpython.com/python/examples/exit-a-python-program
+Checking data types
 
- Menu
- https://computinglearner.com/how-to-create-a-menu-for-a-python-console-application/?utm_content=cmp-true
+https://stackoverflow.com/questions/1549801/what-are-the-differences-between-type-and-isinstance
+
+Exit in Python
+
+https://www.askpython.com/python/examples/exit-a-python-program
+
+Menu
+
+https://computinglearner.com/how-to-create-a-menu-for-a-python-console-application/?utm_content=cmp-true
 
 Delete a row that is containing a certain data
-how-to-delete-remove-row-from-the-google-spreadsheet-using-gspread-lib-in-pytho
+
 https://stackoverflow.com/questions/65313107/python-google-sheets-api-searching-for-a-certain-string-and-returning-the-wh
 https://stackoverflow.com/questions/61599272/google-sheets-search-column-for-value-using-python
 https://docs.gspread.org/en/v5.3.0/api.html
 
 Print into table format - order results
+
 https://www.geeksforgeeks.org/how-to-make-a-table-in-python/
 
 How to edit a dropdown link in the README
+
 https://chrisfrew.in/blog/dropdowns-in-readmes/
 
-.
-.
-.
+I also would like to express my gratitude to Elaine Roche, my mentor, and the tutoring team for their continuous support and valuable feedback. Their guidance, tips, and resources have been instrumental in my coding and testing skills.
 
 ## Disclaimer
 
