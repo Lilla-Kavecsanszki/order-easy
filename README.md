@@ -290,13 +290,34 @@ The OrderEasy website is deployed using Heroku, this was done by:
 
 ## How to Clone
 
-Locate the main page of friends-quiz repository, click the Code button to the left of the green Gitpod button, then choose Local. Copy the URL of the repository, you can click on headings for HTTPS, SSH, and Github CLI to find their individual links. Open your own terminal in your editor and change the current working directory to the location of where you want the cloned directory to be. In the terminal type git clone, and then paste the URL you copied from friends-quiz repository page. Press enter to complete.
+1. Go to the https://github.com/Lilla-Kavecsanszki/order-easy repository 
+2. Click the Code button to the left of the green Gitpod button, then choose Local. 
+3. Click on headings for HTTPS, SSH, and Github CLI to find their individual URL links. Choose the HTTPs one. 
+4. Open your own terminal in your editor and change the current working directory to the location of where you want the 
+   cloned directory to be. 
+5. In the terminal type git clone, and then paste the URL you copied from the repository page. 
+6. Press enter to complete.
 
 [Back to top](https://github.com/Lilla-Kavecsanszki/order-easy#contents)
 
+## How to create and configure the Google spreadsheet and APIs
+
+1. Log in (or create) to your Google account
+2. Create a Google Spreadsheet (order_spreadsheet) on Google Drive. Mine has 1 page; 'stocks'.
+3. In row 1 of the stocks sheet, create the headings: Products, Unit, Price, Par level, Current Stock Holding, How much to 
+   order
+4. Then go ahead and fill out the sheet as needed.
+
+For the initial sample data used in this project click [here](https://github.com/Lilla-Kavecsanszki/order-easy#content)
+
+5. Set up APIs on the [Google Cloud Platform](https://console.cloud.google.com/welcome?project=ordereasy-378810)
+6. Create a new project and give it a unique(!) name, then go to dashboard
+7. Setup Google Drive credentials
+
 ## How to Fork
 
-Locate the main page of friends-quiz repository. Click the fork button in the top right of the screen, between the watch, and the star buttons.
+1. Go to the https://github.com/Lilla-Kavecsanszki/order-easy repository 
+2. Click the fork button in the top right of the screen, between the watch, and the star buttons.
 
 [Back to top](https://github.com/Lilla-Kavecsanszki/order-easy#contents)
 
@@ -364,7 +385,7 @@ Review all functionality and responsiveness on my mobile phone and tablet for al
 
 ## Further testing
 
-I asked friends and family to look at the site on their devices and browsers and report any issues they find. The height of the logo image was adjusted as a result of this on the Home page and also in media queries respectively. It was covering the let’s start button, the audio control buttons and the Rachel button in the middle of the page, therefore those didn’t work until the issue was resolved.
+I asked friends and family to look at the application on their browsers and report any issues they find. This time my focus was on UX and how understandable and easy the application is to use. Some print and ValueError messages were adjusted as a result of this.
 
 [Back to top](https://github.com/Lilla-Kavecsanszki/order-easy#contents)
 
@@ -384,8 +405,11 @@ A few issues came up while testing the website in the meantime;
 
 The Google spreadsheet (order_spreadsheet) that the application uses has the following fictitious initial data which was set up manually by the author:
 
-Stocks Sheet
-
+<p>
+<details><summary>Stocks Sheet</summary><br/>
+<img src="readme-images/updated_spreadsheet_option3.png" alt="Stocks sheet">
+</details>
+<br>
 
 [Back to top](https://github.com/Lilla-Kavecsanszki/order-easy#contents)
 
