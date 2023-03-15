@@ -7,6 +7,8 @@ The user can interact with the application in various ways such as viewing the c
 
 Furthermore, the app stores all stock information and data in an external Google Spreadsheet for easy access and management.
 
+![Application](readme-images/app.png "Application")
+
 [Link to the live project](https://order-easy-python-milestone.herokuapp.com/)
 
 
@@ -265,7 +267,7 @@ The user can exit and terminate the application by choosing option 5 from the me
 
 # Deployment
 
-## How to Clone
+**How to Clone**
 <p>
 <details><summary>Steps</summary><br/>
 
@@ -279,7 +281,7 @@ The user can exit and terminate the application by choosing option 5 from the me
 </details>
 <br>
 
-## How to create and configure the Google spreadsheet and APIs
+**How to create and configure the Google spreadsheet and APIs**
 <p>
 <details><summary>Steps</summary><br/>
 
@@ -324,7 +326,7 @@ Now you have your APIs enabled, and have your credentials file downloaded.
 </details>
 <br>
 
-## How to Fork
+**How to Fork**
 <p>
 <details><summary>Steps</summary><br/>
 
@@ -333,7 +335,7 @@ Now you have your APIs enabled, and have your credentials file downloaded.
 </details>
 <br>
 
-## Deployment to Heroku
+**Deployment to Heroku**
 <p>
 <details><summary>Steps</summary><br/>
 
@@ -367,57 +369,68 @@ The OrderEasy website is deployed using Heroku, this was done by:
 
 ## Manual Testing
 
-**Home Page:**
+**Menu:**
 
 respond correctly and look good on all device widths.
 
-**Let's start link:** Reduce and expand the width of the window to confirm that the text responds correctly and looks good on all device widths. Click on the link item and verify that it links to the correct part of the page and takes the user to the character buttons to be able to choose one. Hover over the link and verify the hover colour change work as expected. Click on the link item and the audio starts as expected. The speaker icon at the beginning warns the user that the link will have sound.
+**Option 1 - Print Product List:** Reduce and expand the width of the window to confirm that the text responds correctly and looks good on all device widths. Click on the link item and verify that it links to the correct part of the page and takes the user to the 
 
-**Audio control buttons:** Reduce and expand the width of the window to verify that the icon buttons display behave and centre as expected and that they look good on all device widths. Hover over the buttons and verify the hover colour change work as expected as well as the zoom-out animation. Click the stop button and the audio stops. Click the play button and the audio carries on from where it was stopped beforehand. If the audio finished, clicking the play button would start over the audio from the beginning.
+**page:**
 
-
-
-**? page:**
-
-**Hamburger menu:** Repeat the verification steps done for the navbar on the Home page. Confirm that the hamburger menu code is identical on all HTML pages.
-
-**Instructions:** Go to the "How to play?" page from a desktop. Reduce and expand the width of the window to confirm that the title and all paragraph texts respond correctly, centre as expected and look good on all device widths. I had to adjust font size and padding-top of the title for this on smaller screen sizes.
-
-Review all functionality and responsiveness on my mobile phone and tablet for all pages.
 
 [Back to top](https://github.com/Lilla-Kavecsanszki/order-easy#contents)
 
 ## User Stories Testing 
 
-1.	As a viewer of the website, I want to easily navigate the site, so I can find what I need, most importantly, to 
-    find the quiz efficiently.
+1.	As a user of the application, I want to easily navigate the app, so I can find what I need quickly.
 
-    - Regardless of which page the viewer is on, they can easily find and use the navigation bar, it also stays visible and on top of the screen even while scrolling.
+    - After the application loeaded, the first 'page' that the user can see is the Menu. The menu breaks down the functionalities into 5 main actions or options to select. The menu will continue to be displayed repeatedly after the completion of each options (1-4). The application will only be terminated when the user selects option 5 from the menu and exits. Therefore, the opportunity to easily select from the menu again is always available to the user after they finish a task.
 
-    ![Hamburger bar](readme-images/1.userstory.png "Hamburger bar")
+2.	As a potential new user to the application, I want to understand what my options are
 
-2.	As a potential new visitor to the website, I want to understand what the game is about and its rules.
+    - The menu is the first interaction with the user and pops up again after each task completion. 
 
-    - By using the sticky navigation menu the user can easily navigate at any time to the "How to play?" page and read the instructions and purpose of the website. 
+   ![Menu](readme-images/app.png "Menu")
 
-    ![Instructions](readme-images/2.userstory.png "Instructions")
+3.  As a user of the application, I want to be able to retrieve the list of products that I have on stocks to make the 
+    stock count, and therefore the later input faster, more efficient.
 
-3.  As a viewer of the website, I want to be able to see my final result and progression in the meantime.
-
-    - After each round, after choosing an answer to the last, tenth question, the user will receive their final points that they achieved with a relevant message along, as well. This information will be displayed in the place of the quiz.
+    - The first option, Print Product List, in the menu helps the user just with that. It gathers all product names that are currently on the stock list and presents them under each other. In case there were products added or deleted from the stock while using the application, those will be reflected on the list when the 'Print Product List' option is subsequently run again.
     
-    ![Final point and message](readme-images/3a%20userstory.png "Final point and message")
+    ![List of Products](readme-images/print_product_list.png "List of Products")
 
-    - With the interactive question counter bar and the score counter on the opposite side, the user can keep track of their journey and success in the game.
+    - After a new product was added.
     
-    ![Display bar](readme-images/3b%20userstory.png "Display bar")
+    ![Updated Product List](readme-images/updated_option_1.png "Updated Product List")
 
-4.  As an interested observer and/or hiring manager, I want to be able to find the web developer and see other projects 
-    from her on social media and industry-relevant sites
+4.  As a user of the application, I want to be able to add a new product to the stock list, in case my business needs a 
+    new, different product with time.
 
-    - Two website link icons can be found in the footer on every page of the website. One takes the visitor to the web developer’s LinkedIn profile page and the other to her Github profile page.
+    - The second option, Add New Product, in the menu helps the user just with that. 
     
-    ![Social media](readme-images/4.%20userstory.png "Social media").  
+    ![Updated Stocks sheet - new product](readme-images/updated_spreadsheet_option2.png "Updated Stocks sheet - new product").  
+
+5.  As a user of the application, I want to be able to remove, delete an existing product from the stock list, in case my
+    business doesn't need that specific product anymore.
+
+    - The third option, Delete Product, in the menu helps the user just with that. 
+    
+    ![Updated Stocks sheet - deleted product](readme-images/updated_spreadsheet_option3.png "Updated Stocks sheet - deleted product").  
+
+6.  As a user of the application, I want to be able to see the results, as in how much I need to order and the date when 
+    the data was entered, and requested too.
+
+    - The fourth option, Get the Order List, in the menu helps the user just with that. 
+    
+    ![Updated Stocks sheet - orders](readme-images/updated_spreadsheet_option4.png "Updated Stocks sheet - orders").  
+
+7.  As a user of the application, I want to be able to see the relevant information of each product when I am ready to 
+    order them for better consideration, including their price, units as well.
+
+    - The table at the completion of option 4, Get the Order List, displays many useful information of each products, namely their unit, their price, their set par level, their current stock holding amounts with the date when this input was created and lastly the amount of how much the user needs to order.
+    - In addition to facilitating quick decision-making on how much of each product the user should order, this information can also be utilized to identify product trends and popularity, determine potential changes required in par levels, calculate gross profit, and steer the business towards economic profitability.
+
+    ![results - orders](readme-images/order_information.png "results - orders"). 
 
 [Back to top](https://github.com/Lilla-Kavecsanszki/order-easy#contents)
 
@@ -429,9 +442,9 @@ I asked friends and family to look at the application on their browsers and repo
 
 ## Bugs
 
-A few issues came up while testing the website in the meantime; 
+A few issues came up while testing the application in the meantime; 
 
-1. The encouraging message didn't work properly at some stage. This was an easy fix, as I realised that I was getting the wrong id from the html file, so after this was linked to the correct element.
+1. The encouraging message didn't work properly at some stage. This was an easy fix, as 
 
 
 [Back to top](https://github.com/Lilla-Kavecsanszki/order-easy#contents)
