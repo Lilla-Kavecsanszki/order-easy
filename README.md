@@ -155,11 +155,11 @@ Python was used to complete this project.
 
 The menu is displayed when the application starts to keep the interface simple to use and uncluttered. The menu features five options, functionalities for the user to choose from; 1) Print Product List, 2) Add New Product, 3) Delete Product, 4) Get the Order List and 5) Exit.
 
-![f_menu](readme-images/top-part.png "f_menu")
+![f_menu](readme-images/f_menu.png "f_menu")
 
 The user is prompted to choose one of the menu options by entering the option number. In the event of an invalid input, an error message will be displayed and the main menu will be displayed again.
 
-![Error to menu options](readme-images/audio-part.png "Error to menu options")
+![Error to menu options](readme-images/invalid_menu_input.png "Error to menu options")
 
 The menu will continue to be displayed repeatedly until the user inputs a valid response and after the completion of each options (1-4). The application will be terminated only when the user selects option 5 from the menu.
 
@@ -167,15 +167,19 @@ The menu will continue to be displayed repeatedly until the user inputs a valid 
 
 If the user selects option 1 from the menu they are shown the list of the products that are currently on the stocks sheet in the Google Spreadheet.
 
-This is data taken from the Google Spreadheet, all information listed under each other from its first column. Products added or deleted while using the application will be reflected on the list when the 'Print Product List' option is subsequently run.
+This is data taken from the Google Spreadheet, all information listed under each other from its first column. 
 
-![Option1](readme-images/how-to-play.png "Option1")
+![Option1](readme-images/print_product_list.png "Option1")
+
+Products added or deleted while using the application will be reflected on the list when the 'Print Product List' option is subsequently run.
+
+![Updated spreadsheet](readme-images/updated_option_1.png "Updated spreadsheet")
 
 #### Option 2 - Add New Product
 
 The user can add a new product by choosing option 2 from the menu. The application displays a message on screen listing the input requirements and also an example input string of values for better understanding.
 
-![Option2](readme-images/how-to-play.png "Option2")
+![Option2](readme-images/add_new_product.png "Option2")
 
 In the event that the user inputs do not satisfy the validation criteria, they will be prompted to re-enter the required information. The explanation of the data needed is displayed again too. 
 
@@ -185,37 +189,82 @@ The rules for the input values:
 - 4 values are required
 - The 4th value, the par level, needs to be an integer so that the program can use it for calculations later on
 
-![Invalid input for option2](readme-images/how-to-play.png "Invalid input for option2")
+![Invalid input for option2](readme-images/invalid_option2_input.png "Invalid input for option2")
 
-![Invalid literal input for option2](readme-images/how-to-play.png "Invalid literal input for option2")
+![Invalid literal input for option2](readme-images/integer_error_option2_input.png "Invalid literal input for option2")
 
 When the user inputs valid data the application displays multiple messages to assure the user with information on how the data is being processed and a new row is added to the stocks spreadsheet for the new product. Once the operation is complete it returns to the menu.
 
-![Valid input for option2](readme-images/how-to-play.png "Valid input for option2")
+![Valid input for option2](readme-images/valid_input_option2.png "Valid input for option2")
 
 The updated Google Spreadsheet:
 
-![Updated Spreadsheet for option2](readme-images/how-to-play.png "Updated Spreadsheet for option2")
+![Updated Spreadsheet for option2](readme-images/updated_spreadsheet_option2.png "Updated Spreadsheet for option2")
 
 #### Option 3 - Delete Product
 
 The user can remove, delete an already existing product by choosing option 3 from the menu. The application displays a message on screen explaining the input requirement and also an example input string of value for better understanding.
 
-![Option3](readme-images/how-to-play.png "Option3")
+![Option3](readme-images/delete_product.png "Option3")
 
+In the event that the user inputs do not satisfy the validation criteria, they will be prompted to re-enter the required information. The explanation of the data needed is displayed again too. 
 
+The rules for the input values:
+
+- At least 1 string of input is required, not a whitespace
+- The product name cannot be left empty
+
+![Invalid input for option3](readme-images/invalid_option3_input.png "Invalid input for option3")
+
+When the user inputs valid data the application displays multiple messages to assure the user with information on how the data is being processed. There are 2 ways where the operation can go; if the program finds a match with the input on the stocks spreadsheet, another message will be dispayed and the first found (matched) item, with its entire row relevantly gets deleted from the stocks spreadsheet for the mentioned product. Always only the first match, in case the user needs the other copy to stay in stocks. Once the operation is complete it returns to the menu.
+
+![Valid input for option3](readme-images/valid_input_option3.png "Valid input for option3")
+
+The updated Google Spreadsheet:
+
+![Updated Spreadsheet for option3](readme-images/updated_spreadsheet_option3.png "Updated Spreadsheet for option3")
+
+When the program doesn't find a match with the input on the stocks spreadsheet, again a message will be dispayed; explaining that the mentioned product is currently not on stock. The product therefore cannot be deleted as does not exist and the program will take the user back to the menu so they can carry on with their work accordingly. 
+
+![Product is not found option3](readme-images/product_is_not_on_stock_option3.png "Product is not found option3")
 
 #### Option 4 - Get the Order List
 
-On the top, the ...
+The main function of the program is when the user can gather relevant information on how much they need to order of their products on stock. They can do this by choosing option 4 from the menu. The application displays a message on screen prompting the user for the first action that they need to do and listing the input requirements, while also providing an example input string of values for better understanding. The program will always ask for the number of data that reflects the current product list on the stocks sheet. This number is calculated by the app by counting the lenght of the first column with values on the stock sheet and then subtracting 1 from it, in order to take the heading row into consideration. 
+Therefore this number gets updated each time a new product was added or an existing one was deleted beforehand. 
 
-![Title](readme-images/how-to-play.png "Title")
+![Option4](readme-images/get_the_order_list.png "Option4")
+
+In the event that the user inputs do not satisfy the validation criteria, they will be prompted to re-enter the required information. The explanation of the data needed is displayed again too. 
+
+The rules for the input values:
+
+- Inputs are separated by commas
+- 'x' values are required, as many values as the program currently requires
+- The input values need to be integers or floats so that they reflect stock take method standards and also the program can use them for calculations later on
+
+![Invalid input for option4 by the amount of values](readme-images/invalid_input_option4_bythenumber.png "Invalid input for option4 by the amount of values")
+
+![Invalid input for option4 by their type](readme-images/invalid_input_option4_bythetype.png "Invalid input for option4 by their type")
+
+When the user inputs valid data the application displays multiple messages to assure the user with information on how the data is being processed. First the program updates the stocks sheet with the user inputs and also adds the current date to the heading of the Current Stock Holding column (5th col) so the user can reference it. After that, the application calculates how much the user needs to order of each products. The application calculates this by taking the par level values from the 4th column and from those it subtracts the previously input current stock holding values, 5th column. The results then are uploaded in the stocks spreadsheet, in the 6th column named, How much to order.
+
+![Valid input for option4](readme-images/valid_input_option4.png "Valid input for option4")
+
+The updated Google Spreadsheet:
+
+![Updated Spreadsheet for option4](readme-images/updated_spreadsheet_option4.png "Updated Spreadsheet for option4")
+
+After performing the necessary calculations and updating the stocks sheet with all the required data, the program presents the information to the user in a table format. This makes it easy and quick for the user to read and gather all the necessary information for placing a new order.
+Once the operation is complete it returns to the menu.
+
+![Order information](readme-images/order_information.png "Order information")
 
 #### Option 5 - Exit
 
-On the top, the ...
+The user can exit and terminate the application by choosing option 5 from the menu. As a final touch, the program displays a Goodbye message to the user.
 
-![Title](readme-images/how-to-play.png "Title")
+![exit](readme-images/exit.png "exit")
 
 # Deployment
 
