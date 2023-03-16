@@ -42,7 +42,7 @@ def get_new_product():
         print("Please enter the details of the new product.")
         print("Data should contain 4 details, separated by commas: "
               "Name,Unit,Price,Par level")
-        print("Examlpe: Campari,Bottle,£14.26,18\n")
+        print("Examlpe: Campari,bottle,£14.26,18\n")
 
         data_str = input("Enter the new product details here:\n").capitalize()
 

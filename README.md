@@ -367,24 +367,28 @@ The OrderEasy website is deployed using Heroku, this was done by:
 </details>
 <br>
 
-## Manual Testing
+### Manual Testing
 
 <p>
 <details><summary>Details</summary><br/>
-**Menu:**
 
-respond correctly and look good on all device widths.
+**Menu:** Load or run the program to confirm that the menu gets displayed and responds correctly. It also gets displayed each time after the completion of each options (1-4). It terminates when the user chooses to exit by option 5. 
 
-**Option 1 - Print Product List:** Reduce and expand the width of the window to confirm that the text responds correctly and looks good on all device widths. Click on the link item and verify that it links to the correct part of the page and takes the user to the 
+**Option 1 - Print Product List:** Enter the number 1 then hit enter to confirm that a reassuring message gets displayed then after the list of current pruducts, as well. Add a new product with option 2 or delete one with option 3 to confirm that the Products List gets updated accordinlgy when option 1 is selected from the menu afterwards.
 
-**page:**
+**Option 2 - Add New Product:** Enter the number 2 then hit enter to confirm that 
 
+**Option 3 - Delete Product:** Enter the number 3 then hit enter to confirm that
+
+**Option 4 - Get the Order List:** Enter the number 4 then hit enter to confirm that
+
+**Option 5 - Exit:** Enter the number 5 then hit enter to confirm that the goodbye message gets displayed and the application terminates.
 
 [Back to top](https://github.com/Lilla-Kavecsanszki/order-easy#contents)
 </details>
 <br>
 
-## User Stories Testing 
+### User Stories Testing 
 <p>
 <details><summary>Details</summary><br/>
 
@@ -442,7 +446,7 @@ respond correctly and look good on all device widths.
 </details>
 <br>
 
-## Further testing
+### Further testing
 <p>
 <details><summary>Details</summary><br/>
 I asked friends and family to look at the application on their browsers and report any issues they find. This time my focus was on UX and how understandable and easy the application is to use. Some print and ValueError messages were adjusted as a result of this.
@@ -453,9 +457,9 @@ I asked friends and family to look at the application on their browsers and repo
 
 ## Bugs
 
-A few issues came up while testing the application in the meantime; 
+An issues came up while testing the application in the meantime; 
 
-1. The 'Delete Product' function got into some issues when attempting to delete an existing product due to case sensitivity. Specifically, the function was unable to locate a product if it was inputted in lowercase or capitalized incorrectly. To address this issue, I utilized the capitalize() method in both the get_new_product() and get_deleted_product() functions. This modification ensures that the user inputs are formatted to start with a capital letter, regardless of their original input. As a result, the application can accurately locate and delete the requested products.
+- The 'Delete Product' function got into some issues when attempting to delete an existing product due to case sensitivity. Specifically, the function was unable to locate a product if it was inputted in lowercase or capitalized incorrectly. To address this issue, I utilized the capitalize() method in both the get_new_product() and get_deleted_product() functions. This modification ensures that the user inputs are formatted to start with a capital letter, regardless of their original input. As a result, the application can accurately locate and delete the requested products.
 
 [Back to top](https://github.com/Lilla-Kavecsanszki/order-easy#contents)
 
