@@ -7,7 +7,7 @@ The user can interact with the application in various ways such as viewing the c
 
 Furthermore, the app stores all stock information and data in an external Google Spreadsheet for easy access and management.
 
-![Application](readme-images/app.png "Application")
+![Application](readme-images/responsive.png "Application")
 
 [Link to the live project](https://order-easy-python-milestone.herokuapp.com/)
 
@@ -429,14 +429,14 @@ Use option 2 to add a new product and add the same product twice. Then, choose o
 
     - The second option, Add New Product, in the menu helps the user just with that. First the program dislays its requirements, what details it need from the user to input in order to be able to upload the new product to the Google sheet and add it to the stock list. When the user input the correct, valid data, the program will display some messages to reassure the user that their request is being processed and completed.
     
-    ![Updated Stocks sheet - new product](readme-images/updated_spreadsheet_option2.png "Updated Stocks sheet - new product").  
+    ![Updated Stocks sheet - new product](readme-images/updated_spreadsheet_option2.png "Updated Stocks sheet - new product") 
 
 5.  As a user of the application, I want to be able to remove, delete an existing product from the stock list, in case my
     business doesn't need that specific product anymore.
 
     - The third option, Delete Product, in the menu helps the user just with that. First the program dislays its requirements, what details it need from the user to input in order to be able to find the mentioned product in the Google sheet and then delete it from the stock list. When the user input the correct, valid data, the program will display some messages to reassure the user that their request is being processed and completed. In case there is a repetition in the list, the app will only delete the first copy, leaving the rest of them on the list.
     
-    ![Updated Stocks sheet - deleted product](readme-images/updated_spreadsheet_option3.png "Updated Stocks sheet - deleted product").  
+    ![Updated Stocks sheet - deleted product](readme-images/updated_spreadsheet_option3.png "Updated Stocks sheet - deleted product") 
 
 6.  As a user of the application, I want to be able to see the results, as in how much I need to order and the date when 
     the data was entered, and requested too.
@@ -477,9 +477,19 @@ An issues came up while testing the application in the meantime;
 # Credits
 
 
-## Content
+## Content - Data Model
 
-The Google spreadsheet (order_spreadsheet) that the application uses has the following fictitious initial data which was set up manually by the author:
+I have based the model on functions used to request, validate, and return data to and from the user. These functions are called from within the 'Menu' function, which offers options to the user to decide on the order in which they want to execute them.
+
+![Data Model](readme-images/data_model.png "Data Model")
+
+The first option allows the user to view a list of products, which is retrieved from the "Stocks Sheet" in an external Google Sheet. The second option allows the user to add a new product to the "Stocks Sheet" by entering data that is validated and uploaded to the Google Sheet. The third option allows the user to delete a product from the "Stocks Sheet" by entering data that is validated and used to find and remove the product from the Google Sheet. The fourth option allows the user to retrieve an order list by entering data that is validated and used to calculate amounts, which are also uploaded to the "Stocks Spreadsheet" in the Google Sheet and printed back to the user in a table format. The fifth option allows the user to exit the program.
+
+The "External Google Sheet" is used to store and manage the data for this system, including the "Stocks Sheet" with product names, units, prices, par levels, current stock holding values and calculated amounts. The user can also use this sheet to update the prices and par levels to keep their business in financial control.
+
+The Google spreadsheet (order_spreadsheet) that the application uses has the following fictitious initial data, which was set up manually by the author:
+
+[See it live here](https://docs.google.com/spreadsheets/d/1N0ECIjFPmC-p_JI4heZHAFZnKkr4nlBe8KIJzD_k5DU/edit#gid=597566188)
 
 <p>
 <details><summary>Stocks Sheet</summary><br/>
