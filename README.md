@@ -372,17 +372,28 @@ The OrderEasy website is deployed using Heroku, this was done by:
 <p>
 <details><summary>Details</summary><br/>
 
-**Menu:** Load or run the program to confirm that the menu gets displayed and responds correctly. It also gets displayed each time after the completion of each options (1-4). It terminates when the user chooses to exit by option 5. 
+**Menu:** Load or run the program to confirm that the menu is displayed correctly and responds as expected. The menu is also displayed after the completion of each option (1-4). The program terminates when the user chooses option 5 to exit.
+Enter any number other then 1-5 or a word to confirm that an error message is displayed explaining that it is a wrong input, and reminding the user of the requirements, and displaying the menu again to prompt for another input.
 
-**Option 1 - Print Product List:** Enter the number 1 then hit enter to confirm that a reassuring message gets displayed then after the list of current pruducts, as well. Add a new product with option 2 or delete one with option 3 to confirm that the Products List gets updated accordinlgy when option 1 is selected from the menu afterwards.
+**Option 1 - Print Product List:** Enter the number 1 and press enter to confirm that a reassuring message is displayed, followed by the list of current products. Use option 2 to add a new product or option 3 to delete a product, and then choose option 1 again to confirm that the Products List is updated accordingly.
 
-**Option 2 - Add New Product:** Enter the number 2 then hit enter to confirm that 
+**Option 2 - Add New Product:** Enter the number 2 and press enter to confirm that a message is displayed explaining what the user needs to do next, including the required user input and an example.
+**Validation:** Enter more or less than the 4 required details to confirm that an error message is displayed explaining that the input data is invalid, and reminding the user of the requirements and the number of details entered. Enter 4 details with the 4th detail not being a number to confirm that an error message is displayed explaining that the input data is invalid, and also printing out the last detail that was entered, along with the requirement that it needs to be an integer.
+**Functionailty:** Enter valid values to confirm that the application displays multiple messages to reassure the user that their request is being processed. After completion, open the Google Sheet to confirm that the new product is uploaded after the previously last row. I also confirm that the product name starts with a capital letter, regardless of whether the input started with a capital letter or not.
 
-**Option 3 - Delete Product:** Enter the number 3 then hit enter to confirm that
+**Option 3 - Delete Product:** Enter the number 3 and press enter to confirm that a message is displayed explaining what the user needs to do next, including the required user input and an example.
+**Validation:** Press enter or input one or more spaces to confirm that an error message is displayed explaining that the input data is invalid, reminding the user of the requirements, and notifying the user that the product name cannot be empty.
+**Functionailty:** Enter valid values, but a product name that is not currently on the stock list to confirm that the application displays multiple messages to reassure the user that their request is being processed and in the last message it says that the product is not currently on stock. I confirm that in this case nothing gets deleted from the Google Sheet. 
+Enter valid values, with an existing product name, to confirm that the application displays multiple messages to reassure the user that their request is being processed. After completion, open the Google Sheet to confirm that the mentioned product is deleted from the list. I also confirm that the function finds the mentioned product regardless of whether the input started with a capital letter or not.
+Use option 2 to add a new product and add the same product twice. Then, choose option 3 to delete the same product and confirm that only the first match will be deleted. View this result in Google Sheet.
 
 **Option 4 - Get the Order List:** Enter the number 4 then hit enter to confirm that
 
-**Option 5 - Exit:** Enter the number 5 then hit enter to confirm that the goodbye message gets displayed and the application terminates.
+
+
+
+
+**Option 5 - Exit:** Enter the number 5 and press enter to confirm that the goodbye message is displayed, and the application terminates.
 
 [Back to top](https://github.com/Lilla-Kavecsanszki/order-easy#contents)
 </details>
