@@ -44,7 +44,7 @@ def get_new_product():
               "Name,Unit,Price,Par level")
         print("Examlpe: Campari,Bottle,£14.26,18\n")
 
-        data_str = input("Enter the new product details here:\n")
+        data_str = input("Enter the new product details here:\n").capitalize()
 
         new_product = data_str.split(",")
         print(new_product)
@@ -112,6 +112,7 @@ def get_deleted_product():
         print("Examlpe: Campari\n")
 
         deleting_product = input("Enter the name of the product here:\n")
+        deleting_product = deleting_product.capitalize()
 
         if validate_data_delete_product(deleting_product):
             print("Data for deleted product is valid")

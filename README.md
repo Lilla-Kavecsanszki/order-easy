@@ -369,6 +369,8 @@ The OrderEasy website is deployed using Heroku, this was done by:
 
 ## Manual Testing
 
+<p>
+<details><summary>Details</summary><br/>
 **Menu:**
 
 respond correctly and look good on all device widths.
@@ -379,8 +381,12 @@ respond correctly and look good on all device widths.
 
 
 [Back to top](https://github.com/Lilla-Kavecsanszki/order-easy#contents)
+</details>
+<br>
 
 ## User Stories Testing 
+<p>
+<details><summary>Details</summary><br/>
 
 1.	As a user of the application, I want to easily navigate the app, so I can find what I need quickly.
 
@@ -406,21 +412,21 @@ respond correctly and look good on all device widths.
 4.  As a user of the application, I want to be able to add a new product to the stock list, in case my business needs a 
     new, different product with time.
 
-    - The second option, Add New Product, in the menu helps the user just with that. 
+    - The second option, Add New Product, in the menu helps the user just with that. First the program dislays its requirements, what details it need from the user to input in order to be able to upload the new product to the Google sheet and add it to the stock list. When the user input the correct, valid data, the program will display some messages to reassure the user that their request is being processed and completed.
     
     ![Updated Stocks sheet - new product](readme-images/updated_spreadsheet_option2.png "Updated Stocks sheet - new product").  
 
 5.  As a user of the application, I want to be able to remove, delete an existing product from the stock list, in case my
     business doesn't need that specific product anymore.
 
-    - The third option, Delete Product, in the menu helps the user just with that. 
+    - The third option, Delete Product, in the menu helps the user just with that. First the program dislays its requirements, what details it need from the user to input in order to be able to find the mentioned product in the Google sheet and then delete it from the stock list. When the user input the correct, valid data, the program will display some messages to reassure the user that their request is being processed and completed. In case there is a repetition in the list, the app will only delete the first copy, leaving the rest of them on the list.
     
     ![Updated Stocks sheet - deleted product](readme-images/updated_spreadsheet_option3.png "Updated Stocks sheet - deleted product").  
 
 6.  As a user of the application, I want to be able to see the results, as in how much I need to order and the date when 
     the data was entered, and requested too.
 
-    - The fourth option, Get the Order List, in the menu helps the user just with that. 
+    - The fourth option, Get the Order List, in the menu helps the user just with that. First the program dislays its requirements, what details it need from the user to input, which is their stock take results. Once the user enters the correct and valid data, the program reassures the user with messages that their request is being processed. The application updates the date in the heading to today's date, uploads the inputted values to the Google sheet, and calculates the required quantity for each item. The calculation is based on the par level values and their difference with the previously taken stock take values. Once all calculations and actions are completed, the application displays the data from the stocks sheet in a table format for easy readability by the user.
     
     ![Updated Stocks sheet - orders](readme-images/updated_spreadsheet_option4.png "Updated Stocks sheet - orders").  
 
@@ -433,10 +439,15 @@ respond correctly and look good on all device widths.
     ![results - orders](readme-images/order_information.png "results - orders"). 
 
 [Back to top](https://github.com/Lilla-Kavecsanszki/order-easy#contents)
+</details>
+<br>
 
 ## Further testing
-
+<p>
+<details><summary>Details</summary><br/>
 I asked friends and family to look at the application on their browsers and report any issues they find. This time my focus was on UX and how understandable and easy the application is to use. Some print and ValueError messages were adjusted as a result of this.
+</details>
+<br>
 
 [Back to top](https://github.com/Lilla-Kavecsanszki/order-easy#contents)
 
@@ -444,8 +455,7 @@ I asked friends and family to look at the application on their browsers and repo
 
 A few issues came up while testing the application in the meantime; 
 
-1. The encouraging message didn't work properly at some stage. This was an easy fix, as 
-
+1. The 'Delete Product' function got into some issues when attempting to delete an existing product due to case sensitivity. Specifically, the function was unable to locate a product if it was inputted in lowercase or capitalized incorrectly. To address this issue, I utilized the capitalize() method in both the get_new_product() and get_deleted_product() functions. This modification ensures that the user inputs are formatted to start with a capital letter, regardless of their original input. As a result, the application can accurately locate and delete the requested products.
 
 [Back to top](https://github.com/Lilla-Kavecsanszki/order-easy#contents)
 
