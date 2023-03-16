@@ -504,6 +504,8 @@ https://docs.gspread.org/en/v5.3.0/api.html
 Print into table format - order results
 
 https://www.geeksforgeeks.org/how-to-make-a-table-in-python/
+https://pypi.org/project/tabulate/
+https://openbase.com/python/tabulate/documentation
 
 How to edit a dropdown link in the README
 

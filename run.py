@@ -301,7 +301,7 @@ def print_order_list():
     for item in range(len(product_order)):
         # print(product_order[item])
         x = [product_order[item]]
-    print(tabulate(product_order, headers="firstrow", tablefmt="grid"))
+    print(tabulate(product_order, tablefmt="grid", maxcolwidths=12))
 
 
 def get_the_order_list():
