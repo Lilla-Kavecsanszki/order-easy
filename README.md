@@ -373,13 +373,12 @@ The OrderEasy website is deployed using Heroku, this was done by:
 <p>
 <details><summary>Details</summary><br/>
 
-**Menu:** Load or run the program to confirm that the menu is displayed correctly and responds as expected. The menu is also displayed after the completion of each option (1-4). The program terminates when the user chooses option 5 to exit.
-Enter any number other then 1-5 or a word to confirm that an error message is displayed explaining that it is a wrong input, and reminding the user of the requirements, and displaying the menu again to prompt for another input.
+**Menu:** Load or run the program to confirm that the menu is displayed correctly and responds as expected. The menu is also displayed after the completion of each option (1-4). The program terminates when the user chooses option 5 to exit. Enter any number other than 1-5 or a word to confirm that an error message is displayed explaining that it is a wrong input, reminding the user of the requirements, and displaying the menu again to prompt for another input.
 
 **Option 1 - Print Product List:** Enter the number 1 and press enter to confirm that a reassuring message is displayed, followed by the list of current products. Use option 2 to add a new product or option 3 to delete a product, and then choose option 1 again to confirm that the Products List is updated accordingly.
 
-**Option 2 - Add New Product:** Enter the number 2 and press enter to confirm that a message is displayed explaining what the user needs to do next, including the required user input and an example.
-**Validation:** Enter more or less than the 4 required details to confirm that an error message is displayed explaining that the input data is invalid, and reminding the user of the requirements and the number of details entered. Enter 4 details with the 4th detail not being a number to confirm that an error message is displayed explaining that the input data is invalid, and also printing out the last detail that was entered, along with the requirement that it needs to be an integer.
+**Option 2 - Add New Product:** Enter the number 2 and press enter to confirm that a message is displayed explaining what the user needs to do next, including the required user input and an example. 
+**Validation:** Enter more or less than the 4 required details to confirm that an error message is displayed explaining that the input data is invalid, and reminding the user of the requirements and the number of details entered. Enter 4 details with the fourth detail not being a number to confirm that an error message is displayed explaining that the input data is invalid, and also printing out the last detail that was entered, along with the requirement that it needs to be an integer.
 **Functionailty:** Enter valid values to confirm that the application displays multiple messages to reassure the user that their request is being processed. After completion, open the Google Sheet to confirm that the new product is uploaded after the previously last row. I also confirm that the product name starts with a capital letter, regardless of whether the input started with a capital letter or not.
 
 **Option 3 - Delete Product:** Enter the number 3 and press enter to confirm that a message is displayed explaining what the user needs to do next, including the required user input and an example.
@@ -390,8 +389,8 @@ Use option 2 to add a new product and add the same product twice. Then, choose o
 
 **Option 4 - Get the Order List:** Enter the number 4 then hit enter to confirm that a message is displayed explaining what the user needs to do next, including the required user input and an example.
 **Validation:** Enter more or less than the required amount of details to confirm that an error message is displayed explaining that the input data is invalid, and reminding the user of the requirements and the number of details entered. Enter the correct amount of details with one detail not being a number to confirm that an error message is displayed explaining that the input data is invalid, and also printing out the invalid detail that was entered, along with the requirement that it needs to be a float or an integer.
-**Functionailty:** Enter valid values to confirm that the application displays multiple messages to reassure the user that their request is being processed. At the end, a table is printed, that presents all data from the Stocks Sheet in an easily readable format. After completion, open the Google Sheet to confirm that the Current Stock Holding column is uploaded and today's date is also displayed in the heading. Also confirm that the How much to order column is uploaded too and all calculations are correct.
-Use option 2 to add a new product or option 3 to delete a product, and then choose option 4 again to confirm that the data and therefore the validation requirements are updated accordingly and the programs runs smoothly with no issues. 
+**Functionailty:** Enter valid values to confirm that the application displays multiple messages to reassure the user that their request is being processed. In the end, a table is printed, that presents all data from the Stocks Sheet in an easily readable format. After completion, open the Google Sheet to confirm that the 'Current Stock Holding' column is uploaded and today's date is also displayed in the heading. Also confirm that the 'How much to order' column is uploaded too and all calculations are correct.
+Use option 2 to add a new product or option 3 to delete a product, and then choose option 4 again to confirm that the data and therefore the validation requirements are updated accordingly, and the programs runs smoothly with no issues. 
 
 **Option 5 - Exit:** Enter the number 5 and press enter to confirm that the goodbye message is displayed, and the application terminates.
 
@@ -425,22 +424,22 @@ Use option 2 to add a new product or option 3 to delete a product, and then choo
 
 4.  As a user of the application, I want to be able to add a new product to the stock list, in case my business needs a 
     new, different product with time.
-
-    - The second option, Add New Product, in the menu helps the user just with that. First the program dislays its requirements, what details it need from the user to input in order to be able to upload the new product to the Google sheet and add it to the stock list. When the user input the correct, valid data, the program will display some messages to reassure the user that their request is being processed and completed.
     
+    -	The second option, Add New Product, in the menu helps the user just with that. First, the program displays its requirements, and what details it needs from the user to input to be able to upload the new product to the Google sheet and add it to the stock list. When the user inputs the correct, valid data, the program will display some messages to reassure the user that their request is being processed and completed.
+
     ![Updated Stocks sheet - new product](readme-images/updated_spreadsheet_option2.png "Updated Stocks sheet - new product") 
 
 5.  As a user of the application, I want to be able to remove, delete an existing product from the stock list, in case my
     business doesn't need that specific product anymore.
 
-    - The third option, Delete Product, in the menu helps the user just with that. First the program dislays its requirements, what details it need from the user to input in order to be able to find the mentioned product in the Google sheet and then delete it from the stock list. When the user input the correct, valid data, the program will display some messages to reassure the user that their request is being processed and completed. In case there is a repetition in the list, the app will only delete the first copy, leaving the rest of them on the list.
+    - The third option, Delete Product, in the menu helps the user just with that. First, the program displays its requirements, and what details it needs the user to input to be able to find the mentioned product in the Google Sheet and then delete it from the stock list. When the user inputs the correct, valid data, the program will display some messages to reassure the user that their request is being processed and completed. In case there is a repetition in the list, the app will only delete the first copy, leaving the rest of them on the list.
     
     ![Updated Stocks sheet - deleted product](readme-images/updated_spreadsheet_option3.png "Updated Stocks sheet - deleted product") 
 
 6.  As a user of the application, I want to be able to see the results, as in how much I need to order and the date when 
     the data was entered, and requested too.
 
-    - The fourth option, Get the Order List, in the menu helps the user just with that. First the program dislays its requirements, what details it need from the user to input, which is their stock take results. Once the user enters the correct and valid data, the program reassures the user with messages that their request is being processed. The application updates the date in the heading to today's date, uploads the inputted values to the Google sheet, and calculates the required quantity for each item. The calculation is based on the par level values and their difference with the previously taken stock take values. Once all calculations and actions are completed, the application displays the data from the stocks sheet in a table format for easy readability by the user.
+    -	The fourth option, Get the Order List, in the menu helps the user just with that. First, the program displays its requirements, and what details it needs from the user to input, which is their stock take results. Once the user enters the correct and valid data, the program reassures the user with messages that their request is being processed. The application updates the date in the heading to today's date and uploads the inputted values to the Google Sheet and calculates the required quantity for each item. The calculation is based on the par level values and their difference with the previously taken stock take values. Once all calculations and actions are completed, the application displays the data from the stocks sheet in a table format for easy readability by the user.
     
     ![Updated Stocks sheet - orders](readme-images/updated_spreadsheet_option4.png "Updated Stocks sheet - orders").  
 
