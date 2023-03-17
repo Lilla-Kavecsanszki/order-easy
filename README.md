@@ -1,6 +1,6 @@
 # OrderEasy Application
 
-This application is designed to cater to the needs of all users who work in any environment that involves stocks and their management, especially the ordering part. The primary objective of the app is to simplify and speed up the process of managing stocks for its users. 
+This application is designed to cater to the needs of all users who work in any environment that involves stocks and their management, especially the ordering part. The primary objective of the app is to simplify and speed up the process of stocks order for its users. 
 The main focus is to be straight forward enough to save time for the user, yet to be engaging and motivating at the same time.
 
 The user can interact with the application in various ways such as viewing the current list of products, adding or removing products with relevant details from the stock list. The app also assists the user in determining how much of each product needs to be ordered based on their input of current stock holding information, which is compared to par levels by the application.
@@ -13,11 +13,11 @@ Furthermore, the app stores all stock information and data in an external Google
 
 
 The business goals of this website are:
-  -	To deliver a high-quality application that addresses all stock management issues efficiently
+  -	To deliver a high-quality application that addresses all stock order issues efficiently
   -	To provide an excellent user experience that is both efficient for each client and easy to use
   - To simplify the management of the product list, thanks to the use of Google Spreadsheet and the update options 
     on the app
-  - To always provide accurate results with the current date noted
+  - To always provide accurate results, also with the current date noted
 
 The customer goals of this website are:
   -	To search for an application that is user-friendly and easy to navigate
@@ -44,7 +44,7 @@ The customer goals of this website are:
   - [Further Testing](https://github.com/Lilla-Kavecsanszki/order-easy#further-testing)
   - [Bugs](https://github.com/Lilla-Kavecsanszki/order-easy#bugs)
 - [Credits](https://github.com/Lilla-Kavecsanszki/order-easy#credits)
-  - [Content - Data Model](https://github.com/Lilla-Kavecsanszki/order-easy#content---data-model)
+  - [Content - Data Model ](https://github.com/Lilla-Kavecsanszki/order-easy#content---data-model)
   - [Acknowledgments and Code](https://github.com/Lilla-Kavecsanszki/order-easy#acknowledgments-and-code)
   - [Disclaimer](https://github.com/Lilla-Kavecsanszki/order-easy#disclaimer)
 
@@ -63,7 +63,7 @@ The ideal client for this business is:
 Visitors of this app search for:
 -	A knowledgeable app that is easy to use
 - That helps reducing the user's time spending on this specific task
-- That is relyable and accurate
+- That is reliable and accurate
 
 This application is the best way to help them achieve these goals because:
 -	The menu makes the access of different commands very easy to execute
@@ -131,7 +131,7 @@ Python was used to complete this project.
 # Frameworks, Libraries, Programs & Technologies Used
 
 - [Miro](https://miro.com/) was used to create the flow charts
-- Github was used as the respository for the projects code after being pushed from Git
+- Github was used as the repository for the projects code after being pushed from Git
 - Git was used for version control by the Gitpod terminal to commit to Git and Push to GitHub; to create and edit all 
   original code
 - Google Spreadsheets was used as the external data store for stock data used by the project
@@ -141,6 +141,9 @@ Python was used to complete this project.
 - gspread is the Python API for Google Sheets
 - Google Auth is the Google authentication library for Python required to use the credentials generated for Google Drive 
   API
+- datetime is a standard library in Python that provides classes for working with dates and times
+- tabulate is a library in Python that provides a way to display data in a visually appealing way, allowing to create 
+  tables from data 
 - Heroku was used to deploy the application and provides an enviroment in which the code can execute
 
 [Back to top](https://github.com/Lilla-Kavecsanszki/order-easy#contents)
@@ -161,9 +164,9 @@ The menu will continue to be displayed repeatedly until the user inputs a valid 
 
 #### Option 1 - Print Product List
 
-If the user selects option 1 from the menu they are shown the list of the products that are currently on the stocks sheet in the Google Spreadheet.
+If the user selects option 1 from the menu they are shown the list of the products that are currently on the stocks sheet in the Google Spreadsheet.
 
-This is data taken from the Google Spreadheet, all information listed under each other from its first column. 
+This is data taken from the Google Spreadsheet, all information listed under each other from its first column. 
 
 ![Option1](readme-images/print_product_list.png "Option1")
 
@@ -183,7 +186,7 @@ The rules for the input values:
 
 - Inputs are separated by commas
 - 4 values are required
-- The 4th value, the par level, needs to be an integer so that the program can use it for calculations later on
+- The fourth value, the par level, needs to be an integer so that the program can use it for calculations later on
 
 ![Invalid input for option2](readme-images/invalid_option2_input.png "Invalid input for option2")
 
@@ -212,7 +215,7 @@ The rules for the input values:
 
 ![Invalid input for option3](readme-images/invalid_option3_input.png "Invalid input for option3")
 
-When the user inputs valid data the application displays multiple messages to assure the user with information on how the data is being processed. There are 2 ways where the operation can go; if the program finds a match with the input on the stocks spreadsheet, another message will be dispayed and the first found (matched) item, with its entire row relevantly gets deleted from the stocks spreadsheet for the mentioned product. Always only the first match, in case the user needs the other copy to stay in stocks. Once the operation is complete it returns to the menu.
+When the user inputs valid data the application displays multiple messages to assure the user with information on how the data is being processed. There are two ways where the operation can go; if the program finds a match with the input on the stocks spreadsheet, another message will be displayed and the first found (matched) item, with its entire row relevantly gets deleted from the stocks spreadsheet for the mentioned product. Always only the first match, in case the user needs the other copy to stay in stocks. Once the operation is complete it returns to the menu.
 
 ![Valid input for option3](readme-images/valid_input_option3.png "Valid input for option3")
 
@@ -226,7 +229,7 @@ When the program doesn't find a match with the input on the stocks spreadsheet, 
 
 #### Option 4 - Get the Order List
 
-The main function of the program is when the user can gather relevant information on how much they need to order of their products on stock. They can do this by choosing option 4 from the menu. The application displays a message on screen prompting the user for the first action that they need to do and listing the input requirements, while also providing an example input string of values for better understanding. The program will always ask for the number of data that reflects the current product list on the stocks sheet. This number is calculated by the app by counting the lenght of the first column with values on the stock sheet and then subtracting 1 from it, in order to take the heading row into consideration. 
+The main function of the program is when the user can gather relevant information on how much they need to order of their products on stock. They can do this by choosing option 4 from the menu. The application displays a message on screen prompting the user for the first action that they need to do and listing the input requirements, while also providing an example input string of values for better understanding. The program will always ask for the number of data that reflects the current product list on the stocks sheet. This number is calculated by the app by counting the length of the first column with values on the stock sheet and then subtracting 1 from it, in order to take the heading row into consideration. 
 Therefore this number gets updated each time a new product was added or an existing one was deleted beforehand. 
 
 ![Option4](readme-images/get_the_order_list.png "Option4")
@@ -498,7 +501,7 @@ The Google spreadsheet (order_spreadsheet) that the application uses has the fol
 
 ## Acknowledgments and Code
 
-I received inspiration for this project from my personal experience working in the hosptality industry, as well as from my partner's struggles with similar issues at his job. These experiences made me figure the logic for this project grately. In addition, I reviewed the work of other students to gain a better understanding of project scope and to identify best practices for Milestone Project 3.
+I received inspiration for this project from my personal experience working in the hospitality industry, as well as from my partner's struggles with similar issues at his job. These experiences made me figure the logic for this project greatly. In addition, I reviewed the work of other students to gain a better understanding of project scope and to identify best practices for Milestone Project 3.
 
 The below websites have been used to understand the logic of building this project with Python.
 
