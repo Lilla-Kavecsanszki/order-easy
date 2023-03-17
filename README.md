@@ -291,7 +291,7 @@ The user can exit and terminate the application by choosing option 5 from the me
 2. Create a Google Spreadsheet (order_spreadsheet) on Google Drive. Mine has 1 page; 'stocks'.
 3. In row 1 of the stocks sheet, create the headings: Products, Unit, Price, Par level, Current Stock Holding, How much to 
    order
-4. Then go ahead and fill out the sheet as needed. For the initial sample data used in this project click [here](https://.github.com/Lilla-Kavecsanszki/order-easy#content)
+4. Then go ahead and fill out the sheet as needed. For the initial sample data used in this project click [here](https://github.com/Lilla-Kavecsanszki/order-easy#content---data-model)
 5. Set up APIs on the [Google Cloud Platform](https://console.cloud.google.com/welcome?project=ordereasy-378810)
 6. Create a new project, so click on the “Select a project” button and then select “new project”. and 
 7. Give it a unique name, then by clicking on “Select Project” again, go to dashboard
