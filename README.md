@@ -44,7 +44,7 @@ The customer goals of this website are:
   - [Further Testing](https://github.com/Lilla-Kavecsanszki/order-easy#further-testing)
   - [Bugs](https://github.com/Lilla-Kavecsanszki/order-easy#bugs)
 - [Credits](https://github.com/Lilla-Kavecsanszki/order-easy#credits)
-  - [Content](https://github.com/Lilla-Kavecsanszki/order-easy#content)
+  - [Content - Data Model](https://github.com/Lilla-Kavecsanszki/order-easy#content---data-model)
   - [Acknowledgments and Code](https://github.com/Lilla-Kavecsanszki/order-easy#acknowledgments-and-code)
   - [Disclaimer](https://github.com/Lilla-Kavecsanszki/order-easy#disclaimer)
 
@@ -118,7 +118,6 @@ This application:
 <details><summary>Option4 - Get the Order List</summary><br/>
 <img src="readme-images/option4-flow.jpg" alt="Get the Order List flow chart">
 </details>
-<br>
 
 [Back to top](https://github.com/Lilla-Kavecsanszki/order-easy#contents)
 
@@ -365,7 +364,6 @@ The OrderEasy website is deployed using Heroku, this was done by:
 <details><summary>Python Validator result on the run.py file</summary><br/>
 <img src="readme-images/python_validator.png" alt="Python Validator">
 </details>
-<br>
 
 ### Manual Testing
 
@@ -387,17 +385,15 @@ Enter any number other then 1-5 or a word to confirm that an error message is di
 Enter valid values, with an existing product name, to confirm that the application displays multiple messages to reassure the user that their request is being processed. After completion, open the Google Sheet to confirm that the mentioned product is deleted from the list. I also confirm that the function finds the mentioned product regardless of whether the input started with a capital letter or not.
 Use option 2 to add a new product and add the same product twice. Then, choose option 3 to delete the same product and confirm that only the first match will be deleted. View this result in Google Sheet.
 
-**Option 4 - Get the Order List:** Enter the number 4 then hit enter to confirm that
-
-
-
-
+**Option 4 - Get the Order List:** Enter the number 4 then hit enter to confirm that a message is displayed explaining what the user needs to do next, including the required user input and an example.
+**Validation:** Enter more or less than the required amount of details to confirm that an error message is displayed explaining that the input data is invalid, and reminding the user of the requirements and the number of details entered. Enter the correct amount of details with one detail not being a number to confirm that an error message is displayed explaining that the input data is invalid, and also printing out the invalid detail that was entered, along with the requirement that it needs to be a float or an integer.
+**Functionailty:** Enter valid values to confirm that the application displays multiple messages to reassure the user that their request is being processed. At the end, a table is printed, that presents all data from the Stocks Sheet in an easily readable format. After completion, open the Google Sheet to confirm that the Current Stock Holding column is uploaded and today's date is also displayed in the heading. Also confirm that the How much to order column is uploaded too and all calculations are correct.
+Use option 2 to add a new product or option 3 to delete a product, and then choose option 4 again to confirm that the data and therefore the validation requirements are updated accordingly and the programs runs smoothly with no issues. 
 
 **Option 5 - Exit:** Enter the number 5 and press enter to confirm that the goodbye message is displayed, and the application terminates.
 
 [Back to top](https://github.com/Lilla-Kavecsanszki/order-easy#contents)
 </details>
-<br>
 
 ### User Stories Testing 
 <p>
@@ -455,14 +451,12 @@ Use option 2 to add a new product and add the same product twice. Then, choose o
 
 [Back to top](https://github.com/Lilla-Kavecsanszki/order-easy#contents)
 </details>
-<br>
 
 ### Further testing
 <p>
 <details><summary>Details</summary><br/>
 I asked friends and family to look at the application on their browsers and report any issues they find. This time my focus was on UX and how understandable and easy the application is to use. Some print and ValueError messages were adjusted as a result of this.
 </details>
-<br>
 
 [Back to top](https://github.com/Lilla-Kavecsanszki/order-easy#contents)
 
@@ -485,7 +479,8 @@ I have based the model on functions used to request, validate, and return data t
 
 The first option allows the user to view a list of products, which is retrieved from the "Stocks Sheet" in an external Google Sheet. The second option allows the user to add a new product to the "Stocks Sheet" by entering data that is validated and uploaded to the Google Sheet. The third option allows the user to delete a product from the "Stocks Sheet" by entering data that is validated and used to find and remove the product from the Google Sheet. The fourth option allows the user to retrieve an order list by entering data that is validated and used to calculate amounts, which are also uploaded to the "Stocks Spreadsheet" in the Google Sheet and printed back to the user in a table format. The fifth option allows the user to exit the program.
 
-The "External Google Sheet" is used to store and manage the data for this system, including the "Stocks Sheet" with product names, units, prices, par levels, current stock holding values and calculated amounts. The user can also use this sheet to update the prices and par levels to keep their business in financial control.
+The External Google Sheet is used to store and manage the data for this system, including the "Stocks Sheet" with product names, units, prices, par levels, current stock holding values and calculated amounts. The user can also use this sheet to update the prices and par levels to keep their business in financial control.
+DataFrames are formatted using the Tabulate() method for better user experience.
 
 The Google spreadsheet (order_spreadsheet) that the application uses has the following fictitious initial data, which was set up manually by the author:
 
